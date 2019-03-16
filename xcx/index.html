@@ -142,20 +142,65 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
+                                  <tr>
+                                        <td id="problem0"></td>
+                                        <td><input id="answer0" type="text" /></td>
+                                        <td id="pending0"></td>
+                                    </tr>
+                                  <tr>
                                         <td id="problem1"></td>
                                         <td><input id="answer1" type="text" /></td>
                                         <td id="pending1"></td>
                                     </tr>
-                                    <tr>
-                                        <td id="problem2">1+1=</td>
-                                        <td>2</td>
-                                        <td>√</td>
+                                  <tr>
+                                        <td id="problem2"></td>
+                                        <td><input id="answer2" type="text" /></td>
+                                        <td id="pending2"></td>
                                     </tr>
-                                    <tr>
-                                        <td>1+1=</td>
-                                        <td>2</td>
-                                        <td>×</td>
+									<tr>
+                                        <td id="problem2"></td>
+                                        <td><input id="answer2" type="text" /></td>
+                                        <td id="pending2"></td>
+                                    </tr>
+									<tr>
+                                        <td id="problem3"></td>
+                                        <td><input id="answer3" type="text" /></td>
+                                        <td id="pending3"></td>
+                                    </tr>
+									<tr>
+                                        <td id="problem4"></td>
+                                        <td><input id="answer4" type="text" /></td>
+                                        <td id="pending4"></td>
+                                    </tr>
+									<tr>
+                                        <td id="problem4"></td>
+                                        <td><input id="answer4" type="text" /></td>
+                                        <td id="pending4"></td>
+                                    </tr>
+									<tr>
+                                        <td id="problem5"></td>
+                                        <td><input id="answer5" type="text" /></td>
+                                        <td id="pending5"></td>
+                                    </tr>
+									<tr>
+                                        <td id="problem6"></td>
+                                        <td><input id="answer6" type="text" /></td>
+                                        <td id="pending6"></td>
+                                    </tr>
+									<tr>
+                                        <td id="problem7"></td>
+                                        <td><input id="answer7" type="text" /></td>
+                                        <td id="pending7"></td>
+                                    </tr>
+									<tr>
+                                        <td id="problem8"></td>
+                                        <td><input id="answer8" type="text" /></td>
+                                        <td id="pending8"></td>
+                                    </tr>
+									<tr>
+                                        <td id="problem9"></td>
+                                        <td><input id="answer9" type="text" /></td>
+                                        <td id="pending9"></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -333,18 +378,76 @@
 								
 								function getProblem()
 								{
-									p = main(1);
-                                    document.getElementById("problem1").innerHTML = p[0][0];
+									p = main(10);
+									
+                                    document.getElementById("problem0").innerHTML = p[0][0];
+									document.getElementById("problem1").innerHTML = p[0][1];
+									document.getElementById("problem2").innerHTML = p[0][2];
+									document.getElementById("problem3").innerHTML = p[0][3];
+									document.getElementById("problem4").innerHTML = p[0][4];
+									document.getElementById("problem5").innerHTML = p[0][5];
+									document.getElementById("problem6").innerHTML = p[0][6];
+									document.getElementById("problem7").innerHTML = p[0][7];
+									document.getElementById("problem8").innerHTML = p[0][8];
+									document.getElementById("problem9").innerHTML = p[0][9];
+									
+									document.getElementById("answer0").value = '';
 									document.getElementById("answer1").value = '';
+									document.getElementById("answer2").value = '';
+									document.getElementById("answer3").value = '';
+									document.getElementById("answer4").value = '';
+									document.getElementById("answer5").value = '';
+									document.getElementById("answer6").value = '';
+									document.getElementById("answer7").value = '';
+									document.getElementById("answer8").value = '';
+									document.getElementById("answer9").value = '';
+									
+									document.getElementById("pending0").innerHTML = '';
 									document.getElementById("pending1").innerHTML = '';
+									document.getElementById("pending2").innerHTML = '';
+									document.getElementById("pending3").innerHTML = '';
+									document.getElementById("pending4").innerHTML = '';
+									document.getElementById("pending5").innerHTML = '';
+									document.getElementById("pending6").innerHTML = '';
+									document.getElementById("pending7").innerHTML = '';
+									document.getElementById("pending8").innerHTML = '';
+									document.getElementById("pending9").innerHTML = '';
 								}
 								
 								function check()
 								{
 									answer = [];
-									answer[0] = document.getElementById("answer1").value;
-									if( answer[0] == p[1][0] ) document.getElementById("pending1").innerHTML = "√";
+									answer[0] = document.getElementById("answer0").value;
+									answer[1] = document.getElementById("answer1").value;
+									answer[2] = document.getElementById("answer2").value;
+									answer[3] = document.getElementById("answer3").value;
+									answer[4] = document.getElementById("answer4").value;
+									answer[5] = document.getElementById("answer5").value;
+									answer[6] = document.getElementById("answer6").value;
+									answer[7] = document.getElementById("answer7").value;
+									answer[8] = document.getElementById("answer8").value;
+									answer[9] = document.getElementById("answer9").value;
+									
+									if( answer[0] == p[1][0] ) document.getElementById("pending0").innerHTML = "√";
+									else document.getElementById("pending0").innerHTML = "×";
+									if( answer[1] == p[1][1] ) document.getElementById("pending1").innerHTML = "√";
 									else document.getElementById("pending1").innerHTML = "×";
+									if( answer[2] == p[1][2] ) document.getElementById("pending2").innerHTML = "√";
+									else document.getElementById("pending2").innerHTML = "×";
+									if( answer[3] == p[1][3] ) document.getElementById("pending3").innerHTML = "√";
+									else document.getElementById("pending3").innerHTML = "×";
+									if( answer[4] == p[1][4] ) document.getElementById("pending4").innerHTML = "√";
+									else document.getElementById("pending4").innerHTML = "×";
+									if( answer[5] == p[1][5] ) document.getElementById("pending5").innerHTML = "√";
+									else document.getElementById("pending5").innerHTML = "×";
+									if( answer[6] == p[1][6] ) document.getElementById("pending6").innerHTML = "√";
+									else document.getElementById("pending6").innerHTML = "×";
+									if( answer[7] == p[1][7] ) document.getElementById("pending7").innerHTML = "√";
+									else document.getElementById("pending7").innerHTML = "×";
+									if( answer[8] == p[1][8] ) document.getElementById("pending8").innerHTML = "√";
+									else document.getElementById("pending8").innerHTML = "×";
+									if( answer[9] == p[1][9] ) document.getElementById("pending9").innerHTML = "√";
+									else document.getElementById("pending9").innerHTML = "×";
 								}
 
 								
