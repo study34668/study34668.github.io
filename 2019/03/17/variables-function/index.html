@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="注：本博客的内容都是我看了老师的讲义并做了一些题目后个人的理解，有错误的地方欢迎大家和我说 多元函数就是多个变量决定函数值的函数，比如z=x+y多元函数的极限，连续，偏导数，可微 极限  极限不存在时：这种情况比较简单，一般就是$y\to0$或者$y\to x$时的极限与另一个需要你自己找的极限不相等（一般你观察函数，令$y\to f(x)$后原来的函数的x的次方量级发生改变时，极限就会改变，需要">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-17T13:55:33.513Z">
+<meta property="og:updated_time" content="2019-03-17T14:44:46.082Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多元函数">
 <meta name="twitter:description" content="注：本博客的内容都是我看了老师的讲义并做了一些题目后个人的理解，有错误的地方欢迎大家和我说 多元函数就是多个变量决定函数值的函数，比如z=x+y多元函数的极限，连续，偏导数，可微 极限  极限不存在时：这种情况比较简单，一般就是$y\to0$或者$y\to x$时的极限与另一个需要你自己找的极限不相等（一般你观察函数，令$y\to f(x)$后原来的函数的x的次方量级发生改变时，极限就会改变，需要">
@@ -172,7 +172,7 @@
 </li>
 <li><h3 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h3><blockquote>
 <ul>
-<li><strong>连续性一般用在该点的极限来判断（其实就是定义），如果$\lim_{P\to P_0}f(P)=f(P_0)​$则f(x)在$P_0​$连续</strong></li>
+<li><strong>连续性一般用在该点的极限来判断（其实就是定义），如果$\lim_{P\to P_0}f(P)=f(P_0)$则f(x)在$P_0$连续</strong></li>
 <li><strong>其实我们经常接触的都是一些“好的”函数，即不同变量的基本初等函数经过有限次的四则运算和有限次的复合运算得到的多元初等函数，而多元初等函数在定义域内都是连续的</strong></li>
 </ul>
 </blockquote>
@@ -211,6 +211,21 @@
 <li><h3 id="隐函数求导"><a href="#隐函数求导" class="headerlink" title="隐函数求导"></a>隐函数求导</h3><blockquote>
 <ul>
 <li><strong>就是对左右两边同时对求偏导即可，但是一定要记住谁是因变量，对谁求偏导，比如$z=g(x,y)$由$f(x,y,z)=0$决定，则求对x偏导时是对x求导，把y当常量，把z当成一个函数比如$(xyz)’=y(z+xz’)$</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><h3 id="方向导数"><a href="#方向导数" class="headerlink" title="方向导数"></a>方向导数</h3><blockquote>
+<ul>
+<li><strong>设$\vec {s}=(m,n)​$则$\frac {\partial f}{\partial \vec {s}}|_{(x_0,y_0)}=\lim_{t\to 0^+}\frac {f(x_0+tm,y_0+tn)-f(x_0,y_0)}{t\sqrt{m^2+n^2}}​$</strong></li>
+<li><strong>设$z=f(x,y)$ 则 $\frac {\partial z}{\partial \vec {s}}|_{P_0}=\frac {\partial z}{\partial x}|_{P_0}\cos \alpha+\frac {\partial z}{\partial y}|_{P_0}\cos \beta$其中cos是s的方向余弦</strong></li>
+<li><strong>梯度：某一点的梯度就是在该点对各个元求偏导得到的值组成的向量</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><h3 id="几何应用"><a href="#几何应用" class="headerlink" title="几何应用"></a>几何应用</h3><blockquote>
+<ul>
+<li><strong>切平面的法向量就是梯度，将点代入就可以得到切平面和法线了</strong></li>
+<li><strong>面交式曲面的法向量就是把各个面的梯度进行向量积即可得到，然后代入点就可以得到切线和法平面了（注意是切线和法平面与上面不同）</strong></li>
 </ul>
 </blockquote>
 </li>
