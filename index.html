@@ -195,7 +195,7 @@
 <li><strong>偏导数存在且连续$\to$可微</strong></li>
 <li><strong>可微$\to$偏导数存在但不一定连续</strong></li>
 <li><strong>可微$\to$连续$\to$极限存在</strong></li>
-<li><strong>$\lim_{P\to P_0}f(P)=f(P_0)$则说明在$P_0​$极限存在</strong></li>
+<li><strong>$\lim_{P\to P_0}f(P)=f(P_0)$则说明在$P_0$极限存在</strong></li>
 </ul>
 </blockquote>
 </li>
@@ -207,10 +207,12 @@
 </li>
 <li><h3 id="隐函数求导"><a href="#隐函数求导" class="headerlink" title="隐函数求导"></a>隐函数求导</h3><blockquote>
 <ul>
-<li><strong>就是对左右两边同时对求偏导即可，但是一定要记住谁是因变量，对谁求偏导，比如$z=g(x,y)$由$f(x,y,z)=0$决定，则求对x偏导时是对x求导，把y当常量，把z当成一个函数比如$(xyz)’=y(z+xz’)$</strong></li>
+<li><strong>就是对左右两边同时对求偏导即可，但是一定要记住谁是因变量，对谁求偏导，比如$z=g(x,y)​$由$f(x,y,z)=0​$决定，则求对x偏导时是对x求导，把y当常量，把z当成一个函数比如$(xyz)’=y(z+xz’)​$</strong></li>
 </ul>
 </blockquote>
 </li>
+</ul>
+<h2 id="方向导数与几何应用"><a href="#方向导数与几何应用" class="headerlink" title="方向导数与几何应用"></a>方向导数与几何应用</h2><ul>
 <li><h3 id="方向导数"><a href="#方向导数" class="headerlink" title="方向导数"></a>方向导数</h3><blockquote>
 <ul>
 <li><strong>设$\vec {s}=(m,n)​$则$\frac {\partial f}{\partial \vec {s}}|_{(x_0,y_0)}=\lim_{t\to 0^+}\frac {f(x_0+tm,y_0+tn)-f(x_0,y_0)}{t\sqrt{m^2+n^2}}​$</strong></li>
@@ -224,6 +226,26 @@
 <li><strong>切平面的法向量就是梯度，将点代入就可以得到切平面和法线了</strong></li>
 <li><strong>面交式曲面的法向量就是把各个面的梯度进行向量积即可得到，然后代入点就可以得到切线和法平面了（注意是切线和法平面与上面不同）</strong></li>
 </ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="极值与最值"><a href="#极值与最值" class="headerlink" title="极值与最值"></a>极值与最值</h2><ul>
+<li><h3 id="极值"><a href="#极值" class="headerlink" title="极值"></a>极值</h3><blockquote>
+<ul>
+<li>$\begin{vmatrix} f’’_{x x}(P_0) &amp; f’’{x y}(P_0) \ f’’{yx}(p_0) &amp; f’’{yy}(P_0) \ \end{vmatrix}$<strong>为$z=f(x,y)$的Hession行列式</strong></li>
+<li><strong>极值求法：先求出各个偏导数均等于0的点，再将这些点代入Hession行列式，若其大于0则为极值点，若等于0则无法确定，若小于0则不是</strong></li>
+<li><strong>当Hession行列式大于0时，若$f’’_{x x}(P_0)&gt;0$则是极小值，若小于0则是极大值</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><h3 id="条件极值，Lagrange函数及最值"><a href="#条件极值，Lagrange函数及最值" class="headerlink" title="条件极值，Lagrange函数及最值"></a>条件极值，Lagrange函数及最值</h3><blockquote>
+<ol>
+<li><p><strong>设$f=f(x,y,z)$及约束条件$F(x,y,z)=0,G(x,y,z)=0$</strong></p>
+</li>
+<li><p><strong>构造Lagrange函数：$L(x,y,z,\lambda,\mu)=f(x,y,z)+\lambda F(x,y,z)+\mu G(x,y,z)$</strong></p>
+</li>
+<li><strong>求出Lagrange函数的各个偏导数全为0的点，之后再看看是不是原函数的极值点，或者代入求得最值</strong></li>
+</ol>
 </blockquote>
 </li>
 </ul>
