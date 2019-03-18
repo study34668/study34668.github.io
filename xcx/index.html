@@ -138,6 +138,7 @@
                                     <tr>
                                         <th>Problem</th>
                                         <th>Answer</th>
+											<th>Right Answer</th>
                                         <th>Pending</th>
                                     </tr>
                                     </thead>
@@ -145,51 +146,61 @@
                                   <tr>
                                         <td id="problem0"></td>
                                         <td><input id="answer0" type="text" /></td>
+											<td id="right0"></td>
                                         <td id="pending0"></td>
                                     </tr>
                                   <tr>
                                         <td id="problem1"></td>
                                         <td><input id="answer1" type="text" /></td>
+											<td id="right1"></td>
                                         <td id="pending1"></td>
                                     </tr>
                                   <tr>
                                         <td id="problem2"></td>
                                         <td><input id="answer2" type="text" /></td>
+										<td id="right2"></td>
                                         <td id="pending2"></td>
                                     </tr>
 									<tr>
                                         <td id="problem3"></td>
                                         <td><input id="answer3" type="text" /></td>
+										<td id="right3"></td>
                                         <td id="pending3"></td>
                                     </tr>
 									<tr>
                                         <td id="problem4"></td>
                                         <td><input id="answer4" type="text" /></td>
+										<td id="right4"></td>
                                         <td id="pending4"></td>
                                     </tr>
 									<tr>
                                         <td id="problem5"></td>
                                         <td><input id="answer5" type="text" /></td>
+										<td id="right5"></td>
                                         <td id="pending5"></td>
                                     </tr>
 									<tr>
                                         <td id="problem6"></td>
                                         <td><input id="answer6" type="text" /></td>
+										<td id="right6"></td>
                                         <td id="pending6"></td>
                                     </tr>
 									<tr>
                                         <td id="problem7"></td>
                                         <td><input id="answer7" type="text" /></td>
+										<td id="right7"></td>
                                         <td id="pending7"></td>
                                     </tr>
 									<tr>
                                         <td id="problem8"></td>
                                         <td><input id="answer8" type="text" /></td>
+										<td id="right8"></td>
                                         <td id="pending8"></td>
                                     </tr>
 									<tr>
                                         <td id="problem9"></td>
                                         <td><input id="answer9" type="text" /></td>
+										<td id="right9"></td>
                                         <td id="pending9"></td>
                                     </tr>
                                     </tbody>
@@ -392,6 +403,17 @@
 									document.getElementById("answer8").value = '';
 									document.getElementById("answer9").value = '';
 									
+									document.getElementById("right0").innerHTML = '';
+									document.getElementById("right1").innerHTML = '';
+									document.getElementById("right2").innerHTML = '';
+									document.getElementById("right3").innerHTML = '';
+									document.getElementById("right4").innerHTML = '';
+									document.getElementById("right5").innerHTML = '';
+									document.getElementById("right6").innerHTML = '';
+									document.getElementById("right7").innerHTML = '';
+									document.getElementById("right8").innerHTML = '';
+									document.getElementById("right9").innerHTML = '';
+									
 									document.getElementById("pending0").innerHTML = '';
 									document.getElementById("pending1").innerHTML = '';
 									document.getElementById("pending2").innerHTML = '';
@@ -417,6 +439,17 @@
 									answer[7] = document.getElementById("answer7").value;
 									answer[8] = document.getElementById("answer8").value;
 									answer[9] = document.getElementById("answer9").value;
+									
+									document.getElementById("right0").innerHTML = p[1][0];
+									document.getElementById("right1").innerHTML = p[1][1];
+									document.getElementById("right2").innerHTML = p[1][2];
+									document.getElementById("right3").innerHTML = p[1][3];
+									document.getElementById("right4").innerHTML = p[1][4];
+									document.getElementById("right5").innerHTML = p[1][5];
+									document.getElementById("right6").innerHTML = p[1][6];
+									document.getElementById("right7").innerHTML = p[1][7];
+									document.getElementById("right8").innerHTML = p[1][8];
+									document.getElementById("right9").innerHTML = p[1][9];
 									
 									if( answer[0] == p[1][0] ) document.getElementById("pending0").innerHTML = "√";
 									else document.getElementById("pending0").innerHTML = "×";
