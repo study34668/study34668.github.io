@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://study34668.github.io">
-  <title>多元函数 | Hexo</title>
+  <title>线性代数笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="注：本博客的内容都是我看了老师的讲义并做了一些题目后个人的理解，有错误的地方欢迎大家和我说 多元函数就是多个变量决定函数值的函数，比如z=x+y">
-<meta name="keywords" content="math">
+  <meta name="description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了">
+<meta name="keywords" content="线代">
 <meta property="og:type" content="article">
-<meta property="og:title" content="多元函数">
-<meta property="og:url" content="https://study34668.github.io/2019/03/17/variables-function/index.html">
+<meta property="og:title" content="线性代数笔记">
+<meta property="og:url" content="https://study34668.github.io/2019/03/18/linear-algebra-note/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="注：本博客的内容都是我看了老师的讲义并做了一些题目后个人的理解，有错误的地方欢迎大家和我说 多元函数就是多个变量决定函数值的函数，比如z=x+y">
+<meta property="og:description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-18T11:02:32.761Z">
+<meta property="og:updated_time" content="2019-03-18T12:23:21.242Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="多元函数">
-<meta name="twitter:description" content="注：本博客的内容都是我看了老师的讲义并做了一些题目后个人的理解，有错误的地方欢迎大家和我说 多元函数就是多个变量决定函数值的函数，比如z=x+y">
+<meta name="twitter:title" content="线性代数笔记">
+<meta name="twitter:description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -141,133 +141,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-variables-function" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-linear-algebra-note" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      多元函数
+      线性代数笔记
     </h1>
   
 
         
-        <a href="/2019/03/17/variables-function/" class="archive-article-date">
-  	<time datetime="2019-03-17T11:53:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
+        <a href="/2019/03/18/linear-algebra-note/" class="archive-article-date">
+  	<time datetime="2019-03-18T11:19:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>注：本博客的内容都是我看了老师的讲义并做了一些题目后个人的理解，有错误的地方欢迎大家和我说</strong></p>
-<h3 id="多元函数就是多个变量决定函数值的函数，比如z-x-y"><a href="#多元函数就是多个变量决定函数值的函数，比如z-x-y" class="headerlink" title="多元函数就是多个变量决定函数值的函数，比如z=x+y"></a>多元函数就是多个变量决定函数值的函数，比如z=x+y</h3><a id="more"></a>
-<h2 id="多元函数的极限，连续，偏导数，可微"><a href="#多元函数的极限，连续，偏导数，可微" class="headerlink" title="多元函数的极限，连续，偏导数，可微"></a>多元函数的极限，连续，偏导数，可微</h2><ul>
-<li><h3 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h3><blockquote>
-<ul>
-<li><strong>极限不存在时：这种情况比较简单，一般就是$y\to0$或者$y\to x$时的极限与另一个需要你自己找的极限不相等（一般你观察函数，令$y\to f(x)$后原来的函数的x的次方量级发生改变时，极限就会改变，需要具体情况具体分析）就说明极限不存在</strong></li>
-<li><strong>极限存在时：这种情况比较复杂，但一般都是夹逼定理求在(0,0)处的极限，并且一般一边都是确定的是&gt;0，难就难在放缩原函数使它小于类似于$x^2+y^2$这种在(0,0)处为0的函数</strong></li>
-</ul>
-</blockquote>
+        <p><strong>注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了</strong></p>
+<a id="more"></a>
+<h2 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h2><h3 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h3><ul>
+<li><p><strong>大数在小数前构成逆序，排列中逆序总数叫逆序数</strong></p>
+</li>
+<li><p><strong>逆序数为偶数是偶排列，反之奇排列</strong></p>
+</li>
+<li><p><strong>一次对换改变排列奇偶性</strong></p>
 </li>
 </ul>
-<ul>
-<li><h3 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h3><blockquote>
-<ul>
-<li><strong>连续性一般用在该点的极限来判断（其实就是定义），如果$\lim_{P\to P_0}f(P)=f(P_0)$则f(x)在$P_0$连续</strong></li>
-<li><strong>其实我们经常接触的都是一些“好的”函数，即不同变量的基本初等函数经过有限次的四则运算和有限次的复合运算得到的多元初等函数，而多元初等函数在定义域内都是连续的</strong></li>
-</ul>
-</blockquote>
+<h3 id="行列式定义"><a href="#行列式定义" class="headerlink" title="行列式定义"></a>行列式定义</h3><ul>
+<li><p><strong>行列式小项列数排列逆序为偶取正号，反之取负号</strong></p>
+</li>
+<li><p><strong>行列式转置后值不变</strong></p>
+</li>
+<li><p><strong>行列式的值就是每行取一个然后相乘，所以上三角是对角线乘积</strong></p>
 </li>
 </ul>
-<ul>
-<li><h3 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h3><blockquote>
-<ul>
-<li><strong>偏导数的求法：直接把其他变量当作常量后对单一变量求导即可</strong></li>
-<li><strong>具体点的偏导数：可以直接求导后带入，但是一般题都是求(0,0)处的偏导数，所以将y=0代入原函数再求导会简单很多（因为偏导数把其他变量都当作常数，什么时候代入都可以）但是求多阶导比如 $f’’’xyz$这样的函数时，就必须求到时$g(z)=f’’xy$再代入后求最后一个导的值</strong></li>
-<li><strong>一般的，若某个函数在开区域的k阶混合偏导数存在且连续，则在此开区域内的k阶混合偏导数与求导顺序无关</strong></li>
+<h3 id="行列式性质"><a href="#行列式性质" class="headerlink" title="行列式性质"></a>行列式性质</h3><ul>
+<li><strong>行列式有两行或两列相同，则行列式值为0</strong></li>
+<li><strong>行列式可以提取公因数</strong></li>
+<li><strong>行列式两行互换，符号改变</strong></li>
+<li><strong>行列式某一行或列可写成两项之和时，行列式也可写成两行列式之和</strong></li>
+<li><strong>将行列式某一行或列乘以k加到另一行或列，行列式值不变</strong></li>
 </ul>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><h3 id="可微"><a href="#可微" class="headerlink" title="可微"></a>可微</h3><blockquote>
-<ul>
-<li><strong>全增量$\Delta z=f(x+\Delta x,y+\Delta y)-f(x,y)​$其实就是x，y变化时z的变化，偏增量就不说了</strong></li>
-<li><strong>对于$z_0=f(x_0,y_0)$的某邻域，如果存在A，B使$\Delta z=A\Delta x+B\Delta y+o(\rho)$其中$\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}$,$o(\rho)$是比$\rho$高阶的无穷小量，则z在(x0,y0)处可微，$A\Delta x+B\Delta y$是其全微分</strong></li>
-<li><strong>类比以前的函数的微分是变化极小时曲线趋向于直线，那么多元函数就是变化极小时曲面就趋向于平面了，那么多元函数的变化量自然就和$\Delta x​$和$\Delta y​$成正比了，所以像$z=x+y​$这种一次二元函数，它的微分自然就与原来系数相等时$dz=dx+dy​$了</strong></li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><h3 id="四者之间的关系"><a href="#四者之间的关系" class="headerlink" title="四者之间的关系"></a>四者之间的关系</h3><blockquote>
-<ul>
-<li><strong>偏导数存在且连续$\to$可微</strong></li>
-<li><strong>可微$\to$偏导数存在但不一定连续</strong></li>
-<li><strong>可微$\to$连续$\to$极限存在</strong></li>
-<li><strong>$\lim_{P\to P_0}f(P)=f(P_0)$则说明在$P_0$极限存在</strong></li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><h3 id="链式法则"><a href="#链式法则" class="headerlink" title="链式法则"></a>链式法则</h3><blockquote>
-<ul>
-<li><strong>对于$z=f(u,v),u=f1(x,y),v=f2(x,y)$来说，$z’_x=z’_u u’_x+z’_v v’_x$，其实就是对所有复合函数u和v都进行一次求到底的偏导后再相加，做过一些题后就熟练了，就是麻烦一点</strong></li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><h3 id="隐函数求导"><a href="#隐函数求导" class="headerlink" title="隐函数求导"></a>隐函数求导</h3><blockquote>
-<ul>
-<li><strong>就是对左右两边同时对求偏导即可，但是一定要记住谁是因变量，对谁求偏导，比如$z=g(x,y)​$由$f(x,y,z)=0​$决定，则求对x偏导时是对x求导，把y当常量，把z当成一个函数比如$(xyz)’=y(z+xz’)​$</strong></li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<h2 id="方向导数与几何应用"><a href="#方向导数与几何应用" class="headerlink" title="方向导数与几何应用"></a>方向导数与几何应用</h2><ul>
-<li><h3 id="方向导数"><a href="#方向导数" class="headerlink" title="方向导数"></a>方向导数</h3><blockquote>
-<ul>
-<li><strong>设$\vec {s}=(m,n)​$则$\frac {\partial f}{\partial \vec {s}}|_{(x_0,y_0)}=\lim_{t\to 0^+}\frac {f(x_0+tm,y_0+tn)-f(x_0,y_0)}{t\sqrt{m^2+n^2}}​$</strong></li>
-<li><strong>设$z=f(x,y)$ 则 $\frac {\partial z}{\partial \vec {s}}|_{P_0}=\frac {\partial z}{\partial x}|_{P_0}\cos \alpha+\frac {\partial z}{\partial y}|_{P_0}\cos \beta$其中cos是s的方向余弦</strong></li>
-<li><strong>梯度：某一点的梯度就是在该点对各个元求偏导得到的值组成的向量</strong></li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><h3 id="几何应用"><a href="#几何应用" class="headerlink" title="几何应用"></a>几何应用</h3><blockquote>
-<ul>
-<li><strong>切平面的法向量就是梯度，将点代入就可以得到切平面和法线了</strong></li>
-<li><strong>面交式曲面的法向量就是把各个面的梯度进行向量积即可得到，然后代入点就可以得到切线和法平面了（注意是切线和法平面与上面不同）</strong></li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<h2 id="极值与最值"><a href="#极值与最值" class="headerlink" title="极值与最值"></a>极值与最值</h2><ul>
-<li><h3 id="极值"><a href="#极值" class="headerlink" title="极值"></a>极值</h3><blockquote>
-<ul>
-<li>$\begin{vmatrix} f’’_{x x}(P_0) &amp; f’’{x y}(P_0) \\  f’’{yx}(p_0) &amp; f’’{yy}(P_0) \ \end{vmatrix}$<strong>为$z=f(x,y)$的Hession行列式</strong></li>
-<li><strong>极值求法：先求出各个偏导数均等于0的点，再将这些点代入Hession行列式，若其大于0则为极值点，若等于0则无法确定，若小于0则不是</strong></li>
-<li><strong>当Hession行列式大于0时，若$f’’_{x x}(P_0)&gt;0$则是极小值，若小于0则是极大值</strong></li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><h3 id="条件极值，Lagrange函数及最值"><a href="#条件极值，Lagrange函数及最值" class="headerlink" title="条件极值，Lagrange函数及最值"></a>条件极值，Lagrange函数及最值</h3><blockquote>
-<ol>
-<li><p><strong>设$f=f(x,y,z)$及约束条件$F(x,y,z)=0,G(x,y,z)=0​$</strong></p>
-</li>
-<li><p><strong>构造Lagrange函数：$L(x,y,z,\lambda,\mu)=f(x,y,z)+\lambda F(x,y,z)+\mu G(x,y,z)$</strong></p>
-</li>
-<li><strong>求出Lagrange函数的各个偏导数全为0的点，之后再看看是不是原函数的极值点，或者代入求得最值</strong></li>
-</ol>
-</blockquote>
-</li>
+<h3 id="行列式展开与性质扩展"><a href="#行列式展开与性质扩展" class="headerlink" title="行列式展开与性质扩展"></a>行列式展开与性质扩展</h3><ul>
+<li><strong>余子式$M_{ij_}$：原行列式去掉第i行第j列</strong></li>
+<li><strong>代数余子式$A_{ij_}$：$(-1)^{i+j}M_{ij}_$</strong></li>
+<li><strong>行列式等于它任意一行（列）各元素与其对应代数余子式乘积之和</strong></li>
+<li>范德蒙德行列式（略）P30</li>
+<li>$\begin{vmatrix} A&amp;O \\ C&amp;B \end{vmatrix}=|A||B|​$</li>
+<li>$\begin{vmatrix} O&amp;A \\ B&amp;C \end{vmatrix}=(-1)^{kr}|A||B|$（k，r：$C=[c_{ij}]_{r×k}$）</li>
 </ul>
 <h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
       
@@ -282,7 +207,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">math</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">线代</a>
         		</li>
       		
 		</ul>
@@ -301,18 +226,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/18/linear-algebra-note/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          线性代数笔记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/16/Test/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Test</div>
+    <a href="/2019/03/17/variables-function/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">多元函数</div>
       <i class="icon-circle-right"></i>
     </a>
   
