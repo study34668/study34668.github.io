@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-18T12:23:21.242Z">
+<meta property="og:updated_time" content="2019-03-18T13:06:03.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数笔记">
 <meta name="twitter:description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了">
@@ -193,6 +193,31 @@
 <li>范德蒙德行列式（略）P30</li>
 <li>$\begin{vmatrix} A&amp;O \\ C&amp;B \end{vmatrix}=|A||B|​$</li>
 <li>$\begin{vmatrix} O&amp;A \\ B&amp;C \end{vmatrix}=(-1)^{kr}|A||B|$（k，r：$C=[c_{ij}]_{r×k}$）</li>
+</ul>
+<h2 id="线性方程组的解"><a href="#线性方程组的解" class="headerlink" title="线性方程组的解"></a>线性方程组的解</h2><p><strong>注：见P9-P12</strong></p>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><ul>
+<li><strong>矩阵满足各种线性运算</strong></li>
+</ul>
+<h3 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h3><ul>
+<li><strong>左乘矩阵名为A，右乘矩阵名为B，则</strong></li>
+<li><strong>A列数与B行数相等</strong></li>
+<li><strong>AB行数等于A行数，列数等于B列数</strong></li>
+<li><strong>满足结合律，分配律，可提取k，与E相乘得本身</strong></li>
+<li><strong>当AB可交换时，$(AB)^k=A^kB^k$</strong></li>
+</ul>
+<h3 id="矩阵转置"><a href="#矩阵转置" class="headerlink" title="矩阵转置"></a>矩阵转置</h3><ul>
+<li>$(A^T)^T=A$</li>
+<li>$(A+B)^T=A^T+B^T$</li>
+<li>$(kA)^T=kA^T$</li>
+<li>$(AB)^T=B^TA^T$</li>
+<li><strong>若$A^T=A$则A为对称矩阵，若$A^T=-A$则A为反对称矩阵</strong></li>
+<li><strong>$A+A^T,AA^T,A^TA$都是对称矩阵，$A-A^T$是反对称矩阵</strong></li>
+<li>$A=\frac{A+A^T}{2}+\frac{A-A^T}{2}$</li>
+</ul>
+<h3 id="矩阵运算与行列式"><a href="#矩阵运算与行列式" class="headerlink" title="矩阵运算与行列式"></a>矩阵运算与行列式</h3><ul>
+<li>$|A^T|=|A|$</li>
+<li>$|kA|=k^n|A|$</li>
+<li>$|AB|=|A||B|$<strong>挺重要的可以化幂的行列式为行列式的幂</strong></li>
 </ul>
 <h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
       
@@ -371,11 +396,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线代</a>
+                <a href="javascript:void(0)" class="js-tag color5">math</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">math</a>
+                <a href="javascript:void(0)" class="js-tag color3">线代</a>
               </li>
             
             <div class="clearfix"></div>
