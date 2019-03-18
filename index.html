@@ -159,7 +159,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>注：本博客的内容都是我看了老师的讲义并做了一些题目后个人的理解，有错误的地方欢迎大家和我说</strong></p>
-<h3 id="多元函数就是多个变量决定函数值的函数，比如z-x-y"><a href="#多元函数就是多个变量决定函数值的函数，比如z-x-y" class="headerlink" title="多元函数就是多个变量决定函数值的函数，比如z=x+y"></a>多元函数就是多个变量决定函数值的函数，比如z=x+y</h3><h2 id="多元函数的极限，连续，偏导数，可微"><a href="#多元函数的极限，连续，偏导数，可微" class="headerlink" title="多元函数的极限，连续，偏导数，可微"></a>多元函数的极限，连续，偏导数，可微</h2><ul>
+<h3 id="多元函数就是多个变量决定函数值的函数，比如z-x-y"><a href="#多元函数就是多个变量决定函数值的函数，比如z-x-y" class="headerlink" title="多元函数就是多个变量决定函数值的函数，比如z=x+y"></a>多元函数就是多个变量决定函数值的函数，比如z=x+y</h3><p>&lt;! –more–&gt;</p>
+<h2 id="多元函数的极限，连续，偏导数，可微"><a href="#多元函数的极限，连续，偏导数，可微" class="headerlink" title="多元函数的极限，连续，偏导数，可微"></a>多元函数的极限，连续，偏导数，可微</h2><ul>
 <li><h3 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h3><blockquote>
 <ul>
 <li><strong>极限不存在时：这种情况比较简单，一般就是$y\to0$或者$y\to x$时的极限与另一个需要你自己找的极限不相等（一般你观察函数，令$y\to f(x)$后原来的函数的x的次方量级发生改变时，极限就会改变，需要具体情况具体分析）就说明极限不存在</strong></li>
@@ -167,6 +168,8 @@
 </ul>
 </blockquote>
 </li>
+</ul>
+<ul>
 <li><h3 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h3><blockquote>
 <ul>
 <li><strong>连续性一般用在该点的极限来判断（其实就是定义），如果$\lim_{P\to P_0}f(P)=f(P_0)$则f(x)在$P_0$连续</strong></li>
@@ -174,22 +177,28 @@
 </ul>
 </blockquote>
 </li>
+</ul>
+<ul>
 <li><h3 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h3><blockquote>
 <ul>
 <li><strong>偏导数的求法：直接把其他变量当作常量后对单一变量求导即可</strong></li>
-<li><strong>具体点的偏导数：可以直接求导后带入，但是一般题都是求(0,0)处的偏导数，所以将y=0代入原函数再求导会简单很多（因为偏导数把其他变量都当作常数，什么时候代入都可以）但是求多阶导比如$f’’’<em>{x y z}$时必须直接求导到最后一个，即求到$g(z)=f’’</em>{x y}$时再代入后求最后一个导的值</strong></li>
+<li><strong>具体点的偏导数：可以直接求导后带入，但是一般题都是求(0,0)处的偏导数，所以将y=0代入原函数再求导会简单很多（因为偏导数把其他变量都当作常数，什么时候代入都可以）但是求多阶导比如 $f’’’xyz$这样的函数时，就必须求到时$g(z)=f’’xy$再代入后求最后一个导的值</strong></li>
 <li><strong>一般的，若某个函数在开区域的k阶混合偏导数存在且连续，则在此开区域内的k阶混合偏导数与求导顺序无关</strong></li>
 </ul>
 </blockquote>
 </li>
+</ul>
+<ul>
 <li><h3 id="可微"><a href="#可微" class="headerlink" title="可微"></a>可微</h3><blockquote>
 <ul>
 <li><strong>全增量$\Delta z=f(x+\Delta x,y+\Delta y)-f(x,y)​$其实就是x，y变化时z的变化，偏增量就不说了</strong></li>
-<li><strong>对于$z_0=f(x_0,y_0)​$的某邻域，如果存在A，B使$\Delta z=A\Delta x+B\Delta y+o(\rho)​$其中$\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}​$,$o(\rho)​$是比$\rho​$高阶的无穷小量，则z在(x0,y0)处可微，$A\Delta x+B\Delta y​$是其全微分</strong></li>
+<li><strong>对于$z_0=f(x_0,y_0)$的某邻域，如果存在A，B使$\Delta z=A\Delta x+B\Delta y+o(\rho)$其中$\rho=\sqrt{(\Delta x)^2+(\Delta y)^2}$,$o(\rho)$是比$\rho$高阶的无穷小量，则z在(x0,y0)处可微，$A\Delta x+B\Delta y$是其全微分</strong></li>
 <li><strong>类比以前的函数的微分是变化极小时曲线趋向于直线，那么多元函数就是变化极小时曲面就趋向于平面了，那么多元函数的变化量自然就和$\Delta x​$和$\Delta y​$成正比了，所以像$z=x+y​$这种一次二元函数，它的微分自然就与原来系数相等时$dz=dx+dy​$了</strong></li>
 </ul>
 </blockquote>
 </li>
+</ul>
+<ul>
 <li><h3 id="四者之间的关系"><a href="#四者之间的关系" class="headerlink" title="四者之间的关系"></a>四者之间的关系</h3><blockquote>
 <ul>
 <li><strong>偏导数存在且连续$\to$可微</strong></li>
@@ -199,12 +208,16 @@
 </ul>
 </blockquote>
 </li>
+</ul>
+<ul>
 <li><h3 id="链式法则"><a href="#链式法则" class="headerlink" title="链式法则"></a>链式法则</h3><blockquote>
 <ul>
 <li><strong>对于$z=f(u,v),u=f1(x,y),v=f2(x,y)$来说，$z’_x=z’_u u’_x+z’_v v’_x$，其实就是对所有复合函数u和v都进行一次求到底的偏导后再相加，做过一些题后就熟练了，就是麻烦一点</strong></li>
 </ul>
 </blockquote>
 </li>
+</ul>
+<ul>
 <li><h3 id="隐函数求导"><a href="#隐函数求导" class="headerlink" title="隐函数求导"></a>隐函数求导</h3><blockquote>
 <ul>
 <li><strong>就是对左右两边同时对求偏导即可，但是一定要记住谁是因变量，对谁求偏导，比如$z=g(x,y)​$由$f(x,y,z)=0​$决定，则求对x偏导时是对x求导，把y当常量，把z当成一个函数比如$(xyz)’=y(z+xz’)​$</strong></li>
@@ -221,6 +234,8 @@
 </ul>
 </blockquote>
 </li>
+</ul>
+<ul>
 <li><h3 id="几何应用"><a href="#几何应用" class="headerlink" title="几何应用"></a>几何应用</h3><blockquote>
 <ul>
 <li><strong>切平面的法向量就是梯度，将点代入就可以得到切平面和法线了</strong></li>
@@ -232,15 +247,17 @@
 <h2 id="极值与最值"><a href="#极值与最值" class="headerlink" title="极值与最值"></a>极值与最值</h2><ul>
 <li><h3 id="极值"><a href="#极值" class="headerlink" title="极值"></a>极值</h3><blockquote>
 <ul>
-<li>$\begin{vmatrix} f’’_{x x}(P_0) &amp; f’’{x y}(P_0) \ f’’{yx}(p_0) &amp; f’’{yy}(P_0) \ \end{vmatrix}$<strong>为$z=f(x,y)$的Hession行列式</strong></li>
+<li>$\begin{vmatrix} f’’_{x x}(P_0) &amp; f’’{x y}(P_0) \\  f’’{yx}(p_0) &amp; f’’{yy}(P_0) \ \end{vmatrix}$<strong>为$z=f(x,y)$的Hession行列式</strong></li>
 <li><strong>极值求法：先求出各个偏导数均等于0的点，再将这些点代入Hession行列式，若其大于0则为极值点，若等于0则无法确定，若小于0则不是</strong></li>
 <li><strong>当Hession行列式大于0时，若$f’’_{x x}(P_0)&gt;0$则是极小值，若小于0则是极大值</strong></li>
 </ul>
 </blockquote>
 </li>
+</ul>
+<ul>
 <li><h3 id="条件极值，Lagrange函数及最值"><a href="#条件极值，Lagrange函数及最值" class="headerlink" title="条件极值，Lagrange函数及最值"></a>条件极值，Lagrange函数及最值</h3><blockquote>
 <ol>
-<li><p><strong>设$f=f(x,y,z)$及约束条件$F(x,y,z)=0,G(x,y,z)=0$</strong></p>
+<li><p><strong>设$f=f(x,y,z)$及约束条件$F(x,y,z)=0,G(x,y,z)=0​$</strong></p>
 </li>
 <li><p><strong>构造Lagrange函数：$L(x,y,z,\lambda,\mu)=f(x,y,z)+\lambda F(x,y,z)+\mu G(x,y,z)$</strong></p>
 </li>
@@ -322,29 +339,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Test-For-New-Blog"><a href="#Test-For-New-Blog" class="headerlink" title="Test For New Blog"></a>Test For New Blog</h1><table>
+        <h1 id="Test-For-New-Blog"><a href="#Test-For-New-Blog" class="headerlink" title="Test For New Blog"></a>Test For New Blog</h1><p>&lt;! –more–&gt;</p>
+<table>
 <thead>
 <tr>
 <th>Problem</th>
 <th>Answer</th>
+<th>Right Answer</th>
+<th>Pending</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1+1=</td>
 <td>2</td>
+<td>2</td>
+<td>√</td>
 </tr>
 <tr>
 <td>1+1=</td>
 <td>2</td>
+<td>2</td>
+<td>×</td>
 </tr>
 <tr>
 <td>1+1=</td>
 <td>2</td>
+<td>2</td>
+<td>×</td>
 </tr>
 <tr>
 <td>1+1=</td>
 <td>2</td>
+<td>2</td>
+<td>√</td>
 </tr>
 </tbody>
 </table>
