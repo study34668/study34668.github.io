@@ -571,14 +571,18 @@
 								function Translate(){
 				
 									var key='';
-									var pin = document.getElementById("pin").value;
+									var pin0 = '';
+									var pin0 = document.getElementById("pin").value;
 									var query = document.getElementById("keyword").value;
 									var to = document.getElementById("to").value;
 								
 									if( pin != '' ) {
 									
+										var pn = 0;
+										var pin = '';
+										pn = (Number(pin0)+438236957) % 1000000000;
+										pin = pin0[3] + String(pin0[2]-2) + String(pin0[5]-1) + String(pn);
 										var appid = '201' + String(++pin[5]) + '0' + String(pin[8]) + String(pin[3]-1) + String(++pin[4]) + pin;
-										var pn = Number(pin);
 										var a2 = (pn-1) % 90025;
 										var a3 = (pn/3) % 16907;
 										var a4 = pn % 54213;
