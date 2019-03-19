@@ -19,8 +19,12 @@
             background: linear-gradient(200deg, #a0cfe4, #e8c37e);
         }
     </style>
+	
+	<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../md5.js"></script>
+	<script src="http://localhost:81/MyGitHubBlog/hexo/config.js"></script>
 
-    <title>Math Problem Creater | Hexo</title>
+    <title>XCX | Hexo</title>
 
 </head>
 </html>
@@ -485,6 +489,175 @@
                     </article>
 
 
+					
+					
+					
+					<article id="post-Test" class="article article-type-post " itemscope itemprop="blogPost">
+                        <div class="article-inner">
+
+                            <header class="article-header">
+
+                                <h1 class="article-title" itemprop="name">
+                                    Translate
+                                </h1>
+
+                            </header>
+
+                            <div class="article-entry" itemprop="articleBody">
+
+							<style type="text/css">
+							input {
+								border: none;
+							}
+							</style>
+									<table>
+										<thead>
+                                    <tr>
+                                        <th>密钥</th>                                     
+											<th>To</th>
+                                    </tr>
+                                    </thead>
+									<tbody>
+									<tr>
+                                        <td><input id="pin" type="password" autocomplete="on"/></td>
+                                        <td><input id="to" type="text" autocomplete="off" placeholder="英文:en 中文:zh"/></td>
+                                    </tr>
+									</tbody>
+									</table>
+									
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>要翻译</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                  <tr>
+                                        <td><input id="keyword" type="text" autocomplete="off" style="width: 100%"/></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+								
+								<table>
+                                    <thead>
+                                    <tr>
+                                        <th>翻译结果</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                  <tr>
+                                        <td id="result"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+								<span id="tip"></span>
+								<button onclick="Translate()">Translate</button>
+								
+                              <script type="text/javascript">
+							  
+								function decod(nn) {
+									var ss='', tmp;
+									while(nn>0) {
+										tmp = nn % 100;
+										if(tmp > 50) ss = String.fromCharCode(tmp) + ss;
+										else ss = String.fromCharCode(tmp+100) + ss;
+										nn = Math.floor(nn/100);
+									}
+									
+									return ss;
+								}
+							  
+								function Translate(){
+				
+									var key='';
+									var pin = document.getElementById("pin").value;
+									var query = document.getElementById("keyword").value;
+									var to = document.getElementById("to").value;
+								
+									if( pin != '' ) {
+									
+										var appid = '201' + String(++pin[5]) + '0' + String(pin[8]) + String(pin[3]-1) + String(++pin[4]) + pin;
+										var pn = Number(pin);
+										var a2 = (pn-1) % 90025;
+										var a3 = (pn/3) % 16907;
+										var a4 = pn % 54213;
+										var sum = a2 + a3 + a4;
+										var a1 = pn*3 + (sum)*5 + 15041;
+										var a5 = pn % (sum*6-9919);
+										var a6 = pn % 100 + 12;
+										var a7 = Math.floor(pn/1000) + 194;
+										key = String(decod(a1)) + String(decod(a2)) + String(decod(a3)) + pin[2] + String(decod(a4)) + pin[5];
+										key = key + key[2] + String(decod(a5)) + key[5] + String(pin[3]-1) + String(decod(a6)) + key[4] + String(decod(a7));
+								
+										
+									}else {
+										try {
+											appid = getConfig()[0];
+											key = getConfig()[1];
+										}
+										catch(e) {
+											key = '';
+										}
+									}
+									
+									
+									if( key != '' ) {
+										// 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
+										
+										
+										var from = 'auto';									
+										var salt = (new Date).getTime();									
+										var str1 = appid + query + salt +key;									
+										var sign = MD5(str1);							
+										
+										document.getElementById('result').innerHTML = 'Waiting';
+										
+										$.ajax({
+											url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+											type: 'get',
+											dataType: 'jsonp',
+											data: {
+												q: query,
+												appid: appid,
+												salt: salt,
+												from: from,
+												to: to,
+												sign: sign
+											},
+											success: function (data) {
+												
+												if( code = data.error_code ) {
+													if( code == '52001' || code == '52002' ) document.getElementById('result').innerHTML = '请重试';
+													else if( code == '52003' || code == '54001' ) document.getElementById('result').innerHTML = '密钥错误';
+													else if( code == '54003' || code == '54005' ) document.getElementById('result').innerHTML = '访问过于频繁';
+													else if( code == '54000' || code == '58001' ) document.getElementById('result').innerHTML = '有参数未填或填错';
+													else if( code == '54004' || code == '58002' ) document.getElementById('result').innerHTML = '本月翻译过多，请下月再试';
+													else document.getElementById('result').innerHTML = '未知错误，请稍后再试';
+												}else{
+													document.getElementById('result').innerHTML = data.trans_result[0].dst;
+												}
+											},
+										});
+										
+									}else{
+										document.getElementById('result').innerHTML = "无法找到密钥";
+									}
+									
+								
+								} 
+								
+                                </script>
+
+                            </div>
+                            <div class="article-info article-info-index">
+                                <div class="mask js-mask"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </article>	
+
+						
                     <aside class="wrap-side-operation">
                         <div class="mod-side-operation">
 
