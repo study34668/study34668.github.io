@@ -508,18 +508,19 @@
 							<style type="text/css">
 							input {
 								border: none;
+								width: 100%;
 							}
 							</style>
 									<table>
 										<thead>
                                     <tr>
                                         <th>密钥</th>                                     
-											<th>To</th>
+											<th>翻译为</th>
                                     </tr>
                                     </thead>
 									<tbody>
 									<tr>
-                                        <td><input id="pin" type="password" autocomplete="on"/></td>
+                                        <td><input id="pin" type="password" autocomplete="off"/></td>
                                         <td><input id="to" type="text" autocomplete="off" placeholder="英文:en 中文:zh"/></td>
                                     </tr>
 									</tbody>
@@ -533,7 +534,7 @@
                                     </thead>
                                     <tbody>
                                   <tr>
-                                        <td><input id="keyword" type="text" autocomplete="off" style="width: 100%"/></td>
+                                        <td><input id="keyword" type="text" autocomplete="off" /></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -571,18 +572,18 @@
 								function Translate(){
 				
 									var key='';
-									var pin0 = '';
-									var pin0 = document.getElementById("pin").value;
+									var pin = '';
+									var pin = document.getElementById("pin").value;
 									var query = document.getElementById("keyword").value;
 									var to = document.getElementById("to").value;
 								
 									if( pin != '' ) {
 									
 										var pn = 0;
-										var pin = '';
-										pn = (Number(pin0)+438236957) % 1000000000;
-										pin = pin0[3] + String(pin0[2]-2) + String(pin0[5]-1) + String(pn);
-										var appid = '201' + String(++pin[5]) + '0' + String(pin[8]) + String(pin[3]-1) + String(++pin[4]) + pin;
+										pn = (Number(pin)+438237157) % 1000000000;
+										var tmp = 0;
+										var tmp = Number(pin[1]) + 2; 
+										var appid = '201' + String(pin[7]) + '0' + String(pin[6]) + '1' + String(tmp) + String(pin[2]-2) + String(pin[3]) + String(pin[5]-1) + String(pn);
 										var a2 = (pn-1) % 90025;
 										var a3 = (pn/3) % 16907;
 										var a4 = pn % 54213;
@@ -591,8 +592,9 @@
 										var a5 = pn % (sum*6-9919);
 										var a6 = pn % 100 + 12;
 										var a7 = Math.floor(pn/1000) + 194;
-										key = String(decod(a1)) + String(decod(a2)) + String(decod(a3)) + pin[2] + String(decod(a4)) + pin[5];
-										key = key + key[2] + String(decod(a5)) + key[5] + String(pin[3]-1) + String(decod(a6)) + key[4] + String(decod(a7));
+										tmp = Number(pin[8]) + 2;
+										key = String(decod(a1)) + String(decod(a2)) + String(decod(a3)) + String(String(pn)[0]-2) + String(decod(a4)) + String(tmp);
+										key = key + key[2] + String(decod(a5)) + key[5] + String(String(pn)[5]-2) + String(decod(a6)) + key[4] + String(decod(a7));
 								
 										
 									}else {
