@@ -553,9 +553,15 @@
                                 </table>
 
 								<span id="tip"></span>
-								<button onclick="Translate()">Translate</button>
+								<button onclick="Translate()">翻译</button>
+								<button onclick="Init()">清空</button>
 								
                               <script type="text/javascript">
+							  
+								function Init() {
+									document.getElementById("keyword").value = '';
+									document.getElementById('result').innerHTML = '';
+								}
 							  
 								function decod(nn) {
 									var ss='', tmp;
