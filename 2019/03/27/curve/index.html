@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://study34668.github.io">
-  <title>线性代数笔记 | Hexo</title>
+  <title>曲面 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了">
-<meta name="keywords" content="线代">
+  <meta name="description" content="曲面 柱面 柱面的图像很简单，就是准线（可以想成底面）在母线（可以想成高）方向不断延伸就可以得到 求法：对于柱面任意一点M，都有准线上一点使两点连线与母线平行，所以求的时候设一个$M_0​$，则$M_0​$满足准线方程（1），且$MM_0​$与母线平行（2），（1）（2）联立即可解出柱面方程   旋转曲面 (1) 空集合：$x^2+y^2+z^2=-1,x^2+y^2=-1,x^2=-1$ (2)">
+<meta name="keywords" content="math">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性代数笔记">
-<meta property="og:url" content="https://study34668.github.io/2019/03/18/linear-algebra-note/index.html">
+<meta property="og:title" content="曲面">
+<meta property="og:url" content="https://study34668.github.io/2019/03/27/curve/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了">
+<meta property="og:description" content="曲面 柱面 柱面的图像很简单，就是准线（可以想成底面）在母线（可以想成高）方向不断延伸就可以得到 求法：对于柱面任意一点M，都有准线上一点使两点连线与母线平行，所以求的时候设一个$M_0​$，则$M_0​$满足准线方程（1），且$MM_0​$与母线平行（2），（1）（2）联立即可解出柱面方程   旋转曲面 (1) 空集合：$x^2+y^2+z^2=-1,x^2+y^2=-1,x^2=-1$ (2)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-20T11:14:07.405Z">
+<meta property="og:updated_time" content="2019-03-27T12:54:31.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性代数笔记">
-<meta name="twitter:description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了">
+<meta name="twitter:title" content="曲面">
+<meta name="twitter:description" content="曲面 柱面 柱面的图像很简单，就是准线（可以想成底面）在母线（可以想成高）方向不断延伸就可以得到 求法：对于柱面任意一点M，都有准线上一点使两点连线与母线平行，所以求的时候设一个$M_0​$，则$M_0​$满足准线方程（1），且$MM_0​$与母线平行（2），（1）（2）联立即可解出柱面方程   旋转曲面 (1) 空集合：$x^2+y^2+z^2=-1,x^2+y^2=-1,x^2=-1$ (2)">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -141,84 +141,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-linear-algebra-note" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-curve" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      线性代数笔记
+      曲面
     </h1>
   
 
         
-        <a href="/2019/03/18/linear-algebra-note/" class="archive-article-date">
-  	<time datetime="2019-03-18T11:19:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
+        <a href="/2019/03/27/curve/" class="archive-article-date">
+  	<time datetime="2019-03-27T11:36:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了</strong></p>
-<a id="more"></a>
-<h2 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h2><h3 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a>逆序数</h3><ul>
-<li><p><strong>大数在小数前构成逆序，排列中逆序总数叫逆序数</strong></p>
+        <h2 id="曲面"><a href="#曲面" class="headerlink" title="曲面"></a>曲面</h2><ul>
+<li><h4 id="柱面"><a href="#柱面" class="headerlink" title="柱面"></a>柱面</h4><ul>
+<li><strong>柱面的图像很简单，就是准线（可以想成底面）在母线（可以想成高）方向不断延伸就可以得到</strong></li>
+<li><strong>求法：对于柱面任意一点M，都有准线上一点使两点连线与母线平行，所以求的时候设一个$M_0​$，则$M_0​$满足准线方程（1），且$MM_0​$与母线平行（2），（1）（2）联立即可解出柱面方程</strong></li>
+</ul>
 </li>
-<li><p><strong>逆序数为偶数是偶排列，反之奇排列</strong></p>
+<li><h4 id="旋转曲面"><a href="#旋转曲面" class="headerlink" title="旋转曲面"></a>旋转曲面</h4><blockquote>
+<p>(1) 空集合：$x^2+y^2+z^2=-1,x^2+y^2=-1,x^2=-1$</p>
+<p>(2) 单点集：$x^2+y^2+z^2=0$</p>
+<p>(3) 两个平行平面：$x^2=1$</p>
+<p>(4) 一个平面：$x^2=0$</p>
+<p>(5) 两个相交平面：$x^2=y^2$</p>
+<p>(6) 抛物柱面：$x^2+y=0$</p>
+<p>(7) 椭圆柱面：$x^2+y^2=1$</p>
+<p>(8) 双曲柱面：$x^2-y^2=1$</p>
+<p>(9) 椭球面：$x^2+y^2+z^2=1$</p>
+<p>(10) 椭圆抛物面：$x^2+y^2=z$</p>
+<p>(11) 双曲抛物面（马鞍面）：$x^2-y^2=z$</p>
+<p>(12) 椭圆锥面：$x^2+y^2=z^2$</p>
+<p>(13) 单叶双曲面：$x^2+y^2=z^2+1$</p>
+<p>(14) 双叶双曲面：$x^2+y^2=z^2-1$</p>
+</blockquote>
+<ul>
+<li><strong>特殊旋转曲面求法：对于曲面任意一点M，都有母线上一点$M_0$使M在$M_0$绕轴（一般都是z轴）旋转一周的圆周上，所以求时设$M_0$，则$M_0$满足母线方程（1），且$MM_0$在垂直轴方向共面（一般都是z轴等高）（2），M在$M_0$绕轴的圆周上（3），（1）（2）（3）联立可解出旋转曲面方程</strong></li>
+<li><strong>直纹曲面：对于曲面上任意一点M都有通过M的直线L在曲面上，所有柱面和锥面都是直纹曲面，除了椭球面、椭圆抛物面和双叶双曲面（马鞍面），其它二次曲面都是直纹曲面</strong></li>
+<li><strong>对于曲面的方程，应该尽量化简消参，或者配方，这样容易得到曲面的真面目</strong></li>
+</ul>
 </li>
-<li><p><strong>一次对换改变排列奇偶性</strong></p>
+<li><h4 id="投影"><a href="#投影" class="headerlink" title="投影"></a>投影</h4><ul>
+<li><strong>面交式曲线投影求法（坐标面）：先两式联立消去一个变量，则所得的的方程既表示曲线的投影柱面，又是在相应平面的投影，之后再用另一个式子求出参数的范围，就得到了投影方程了</strong></li>
+</ul>
 </li>
-</ul>
-<h3 id="行列式定义"><a href="#行列式定义" class="headerlink" title="行列式定义"></a>行列式定义</h3><ul>
-<li><p><strong>行列式小项列数排列逆序为偶取正号，反之取负号</strong></p>
-</li>
-<li><p><strong>行列式转置后值不变</strong></p>
-</li>
-<li><p><strong>行列式的值就是每行取一个然后相乘，所以上三角是对角线乘积</strong></p>
-</li>
-</ul>
-<h3 id="行列式性质"><a href="#行列式性质" class="headerlink" title="行列式性质"></a>行列式性质</h3><ul>
-<li><strong>行列式有两行或两列相同，则行列式值为0</strong></li>
-<li><strong>行列式可以提取公因数</strong></li>
-<li><strong>行列式两行互换，符号改变</strong></li>
-<li><strong>行列式某一行或列可写成两项之和时，行列式也可写成两行列式之和</strong></li>
-<li><strong>将行列式某一行或列乘以k加到另一行或列，行列式值不变</strong></li>
-</ul>
-<h3 id="行列式展开与性质扩展"><a href="#行列式展开与性质扩展" class="headerlink" title="行列式展开与性质扩展"></a>行列式展开与性质扩展</h3><ul>
-<li><strong>余子式$M_{ij}​$_：原行列式去掉第i行第j列</strong></li>
-<li><strong>代数余子式$A_{ij}$：$(-1)^{i+j}M_{ij}​$</strong></li>
-<li><strong>行列式等于它任意一行（列）各元素与其对应代数余子式乘积之和</strong></li>
-<li><strong>行列式一行（列）的元素与其它行（列）代数余子式乘积之和为0</strong></li>
-<li>范德蒙德行列式（略）P30</li>
-<li>$\begin{vmatrix} A&amp;O \\ C&amp;B \end{vmatrix}=|A||B|​$</li>
-<li>$\begin{vmatrix} O&amp;A \\ B&amp;C \end{vmatrix}=(-1)^{kr}|A||B|$（k，r：$C=[c_{ij}]_{r×k}$）</li>
-</ul>
-<h2 id="线性方程组的解"><a href="#线性方程组的解" class="headerlink" title="线性方程组的解"></a>线性方程组的解</h2><p><strong>注：见P9-P12</strong></p>
-<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><ul>
-<li><strong>矩阵满足各种线性运算</strong></li>
-</ul>
-<h3 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h3><ul>
-<li><strong>左乘矩阵名为A，右乘矩阵名为B，则</strong></li>
-<li><strong>A列数与B行数相等</strong></li>
-<li><strong>AB行数等于A行数，列数等于B列数</strong></li>
-<li><strong>满足结合律，分配律，可提取k，与E相乘得本身</strong></li>
-<li><strong>当AB可交换时，$(AB)^k=A^kB^k$</strong></li>
-</ul>
-<h3 id="矩阵转置"><a href="#矩阵转置" class="headerlink" title="矩阵转置"></a>矩阵转置</h3><ul>
-<li>$(A^T)^T=A$</li>
-<li>$(A+B)^T=A^T+B^T$</li>
-<li>$(kA)^T=kA^T$</li>
-<li>$(AB)^T=B^TA^T$</li>
-<li><strong>若$A^T=A$则A为对称矩阵，若$A^T=-A$则A为反对称矩阵</strong></li>
-<li><strong>$A+A^T,AA^T,A^TA$都是对称矩阵，$A-A^T$是反对称矩阵</strong></li>
-<li>$A=\frac{A+A^T}{2}+\frac{A-A^T}{2}$</li>
-</ul>
-<h3 id="矩阵运算与行列式"><a href="#矩阵运算与行列式" class="headerlink" title="矩阵运算与行列式"></a>矩阵运算与行列式</h3><ul>
-<li>$|A^T|=|A|$</li>
-<li>$|kA|=k^n|A|$</li>
-<li>$|AB|=|A||B|$<strong>挺重要的可以化幂的行列式为行列式的幂</strong></li>
 </ul>
 <h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
       
@@ -233,7 +207,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">线代</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">math</a>
         		</li>
       		
 		</ul>
@@ -252,18 +226,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/27/curve/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          曲面
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/17/variables-function/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">多元函数</div>
+    <a href="/2019/03/18/linear-algebra-note/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">线性代数笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
