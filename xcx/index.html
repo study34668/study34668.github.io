@@ -138,6 +138,221 @@
 				</style>
 			   
 			   
+			   
+					<article id="post-Test" class="article article-type-post " itemscope itemprop="blogPost">
+                       <div class="article-inner">
+
+                            <header class="article-header">
+
+                                <h1 class="article-title" itemprop="name">
+                                    两位数乘法
+                                </h1>
+
+                            </header>
+
+                            <div class="article-entry" itemprop="articleBody">
+
+						
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>乘式</th>
+                                        <th>你的答案</th>
+										   <th>正确答案</th>
+                                        <th>对错</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                 <tr>
+                                      <td id="problem20"></td>
+                                      <td><input id="answer20" type="text" /></td>
+										<td id="right20"></td>
+                                      <td id="pending20"></td>
+                                 </tr>
+                                 <tr>
+                                      <td id="problem21"></td>
+                                      <td><input id="answer21" type="text" /></td>
+										<td id="right21"></td>
+                                      <td id="pending21"></td>
+                                 </tr>
+                                 <tr>
+                                      <td id="problem22"></td>
+                                      <td><input id="answer22" type="text" /></td>
+										<td id="right22"></td>
+                                      <td id="pending22"></td>
+                                 </tr>
+									<tr>
+                                      <td id="problem23"></td>
+                                      <td><input id="answer23" type="text" /></td>
+										<td id="right23"></td>
+                                      <td id="pending23"></td>
+                                 </tr>
+									<tr>
+                                      <td id="problem24"></td>
+                                      <td><input id="answer24" type="text" /></td>
+										<td id="right24"></td>
+                                      <td id="pending24"></td>
+                                 </tr>
+									<tr>
+                                      <td id="problem25"></td>
+                                      <td><input id="answer25" type="text" /></td>
+										<td id="right25"></td>
+                                      <td id="pending25"></td>
+                                 </tr>
+									<tr>
+                                      <td id="problem26"></td>
+                                      <td><input id="answer26" type="text" /></td>
+										<td id="right26"></td>
+                                      <td id="pending26"></td>
+                                 </tr>
+									<tr>
+                                      <td id="problem27"></td>
+                                      <td><input id="answer27" type="text" /></td>
+										<td id="right27"></td>
+                                      <td id="pending27"></td>
+                                 </tr>
+									<tr>
+                                      <td id="problem28"></td>
+                                      <td><input id="answer28" type="text" /></td>
+										<td id="right28"></td>
+                                      <td id="pending28"></td>
+                                 </tr>
+									<tr>
+                                      <td id="problem29"></td>
+                                      <td><input id="answer29" type="text" /></td>
+										<td id="right29"></td>
+                                      <td id="pending29"></td>
+                                 </tr>
+                                    </tbody>
+                                </table>
+
+								<button onclick="getCheng()" >出题</button>
+								<button onclick="checkCheng()" >检查</button>
+								
+                              <script type="text/javascript">
+	
+								function getCheng() {
+								
+									finaCheng = [];
+									var ti = [];
+									var answer = [];
+									for(var l=0; l<=9; l++) {
+										a1 = Math.floor(Math.random()*99);
+										a2 = Math.floor(Math.random()*99);
+										ti[l] = String(a1) + '×' + String(a2);
+										answer[l] = String(a1 * a2);
+									}
+									finaCheng.push(ti);
+									finaCheng.push(answer);
+									
+									
+									document.getElementById("problem20").innerHTML = finaCheng[0][0];
+									document.getElementById("problem21").innerHTML = finaCheng[0][1];
+									document.getElementById("problem22").innerHTML = finaCheng[0][2];
+									document.getElementById("problem23").innerHTML = finaCheng[0][3];
+									document.getElementById("problem24").innerHTML = finaCheng[0][4];
+									document.getElementById("problem25").innerHTML = finaCheng[0][5];
+									document.getElementById("problem26").innerHTML = finaCheng[0][6];
+									document.getElementById("problem27").innerHTML = finaCheng[0][7];
+									document.getElementById("problem28").innerHTML = finaCheng[0][8];
+									document.getElementById("problem29").innerHTML = finaCheng[0][9];
+									
+									document.getElementById("answer20").value = '';
+									document.getElementById("answer21").value = '';
+									document.getElementById("answer22").value = '';
+									document.getElementById("answer23").value = '';
+									document.getElementById("answer24").value = '';
+									document.getElementById("answer25").value = '';
+									document.getElementById("answer26").value = '';
+									document.getElementById("answer27").value = '';
+									document.getElementById("answer28").value = '';
+									document.getElementById("answer29").value = '';
+									
+									document.getElementById("right20").innerHTML = '';
+									document.getElementById("right21").innerHTML = '';
+									document.getElementById("right22").innerHTML = '';
+									document.getElementById("right23").innerHTML = '';
+									document.getElementById("right24").innerHTML = '';
+									document.getElementById("right25").innerHTML = '';
+									document.getElementById("right26").innerHTML = '';
+									document.getElementById("right27").innerHTML = '';
+									document.getElementById("right28").innerHTML = '';
+									document.getElementById("right29").innerHTML = '';
+									
+									document.getElementById("pending20").innerHTML = '';
+									document.getElementById("pending21").innerHTML = '';
+									document.getElementById("pending22").innerHTML = '';
+									document.getElementById("pending23").innerHTML = '';
+									document.getElementById("pending24").innerHTML = '';
+									document.getElementById("pending25").innerHTML = '';
+									document.getElementById("pending26").innerHTML = '';
+									document.getElementById("pending27").innerHTML = '';
+									document.getElementById("pending28").innerHTML = '';
+									document.getElementById("pending29").innerHTML = '';
+								}
+                                
+								
+								function checkCheng() {
+								
+									answerCheng = [];
+									
+									answerCheng[0] = document.getElementById("answer20").value;
+									answerCheng[1] = document.getElementById("answer21").value;
+									answerCheng[2] = document.getElementById("answer22").value;
+									answerCheng[3] = document.getElementById("answer23").value;
+									answerCheng[4] = document.getElementById("answer24").value;
+									answerCheng[5] = document.getElementById("answer25").value;
+									answerCheng[6] = document.getElementById("answer26").value;
+									answerCheng[7] = document.getElementById("answer27").value;
+									answerCheng[8] = document.getElementById("answer28").value;
+									answerCheng[9] = document.getElementById("answer29").value;									
+									
+									document.getElementById("right20").innerHTML = finaCheng[1][0];
+									document.getElementById("right21").innerHTML = finaCheng[1][1];
+									document.getElementById("right22").innerHTML = finaCheng[1][2];
+									document.getElementById("right23").innerHTML = finaCheng[1][3];
+									document.getElementById("right24").innerHTML = finaCheng[1][4];
+									document.getElementById("right25").innerHTML = finaCheng[1][5];
+									document.getElementById("right26").innerHTML = finaCheng[1][6];
+									document.getElementById("right27").innerHTML = finaCheng[1][7];
+									document.getElementById("right28").innerHTML = finaCheng[1][8];
+									document.getElementById("right29").innerHTML = finaCheng[1][9];
+								
+									if( answerCheng[0] == finaCheng[1][0] ) document.getElementById("pending20").innerHTML = "√";
+									else document.getElementById("pending20").innerHTML = "×";
+									if( answerCheng[1] == finaCheng[1][1] ) document.getElementById("pending21").innerHTML = "√";
+									else document.getElementById("pending21").innerHTML = "×";
+									if( answerCheng[2] == finaCheng[1][2] ) document.getElementById("pending22").innerHTML = "√";
+									else document.getElementById("pending22").innerHTML = "×";
+									if( answerCheng[3] == finaCheng[1][3] ) document.getElementById("pending23").innerHTML = "√";
+									else document.getElementById("pending23").innerHTML = "×";
+									if( answerCheng[4] == finaCheng[1][4] ) document.getElementById("pending24").innerHTML = "√";
+									else document.getElementById("pending24").innerHTML = "×";
+									if( answerCheng[5] == finaCheng[1][5] ) document.getElementById("pending25").innerHTML = "√";
+									else document.getElementById("pending25").innerHTML = "×";
+									if( answerCheng[6] == finaCheng[1][6] ) document.getElementById("pending26").innerHTML = "√";
+									else document.getElementById("pending26").innerHTML = "×";
+									if( answerCheng[7] == finaCheng[1][7] ) document.getElementById("pending27").innerHTML = "√";
+									else document.getElementById("pending27").innerHTML = "×";
+									if( answerCheng[8] == finaCheng[1][8] ) document.getElementById("pending28").innerHTML = "√";
+									else document.getElementById("pending28").innerHTML = "×";
+									if( answerCheng[9] == finaCheng[1][9] ) document.getElementById("pending29").innerHTML = "√";
+									else document.getElementById("pending29").innerHTML = "×";
+								}
+								
+								
+                                </script>
+
+                            </div>
+                            <div class="article-info article-info-index">
+                                <div class="mask js-mask"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </article>
+			   
+			   
+			   
 					<article id="post-Test" class="article article-type-post " itemscope itemprop="blogPost">
                        <div class="article-inner">
 
@@ -391,15 +606,14 @@
                     </article>
 
 					
-					
-			   
+				
                    <article id="post-Test" class="article article-type-post " itemscope itemprop="blogPost">
                        <div class="article-inner">
 
                             <header class="article-header">
 
                                 <h1 class="article-title" itemprop="name">
-                                    Math Problem Creater
+                                    小学数学计算题生成器
                                 </h1>
 
                             </header>
@@ -410,10 +624,10 @@
                                 <table>
                                     <thead>
                                     <tr>
-                                        <th>Problem</th>
-                                        <th>Answer</th>
-											<th>Right Answer</th>
-                                        <th>Pending</th>
+                                        <th>题目</th>
+                                        <th>你的答案</th>
+											<th>正确答案</th>
+                                        <th>对错</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -480,8 +694,8 @@
                                     </tbody>
                                 </table>
 
-								<button onclick="getProblem()" >Get</button>
-								<button onclick="check()" >Check</button>
+								<button onclick="getProblem()" >出题</button>
+								<button onclick="check()" >检查</button>
 								
                                 <script type="text/javascript">
 
@@ -763,8 +977,8 @@
 
                             <header class="article-header">
 
-                                <h1 class="article-title" itemprop="name">
-                                    Translate
+                                <h1 id="titleTip" class="article-title" itemprop="name">
+                                    Translate → 翻译
                                 </h1>
 
                             </header>
@@ -784,9 +998,9 @@
                                      <td><input id="pin" type="password" autocomplete="off"/></td>
                                      <td>
 											<!--input id="to" type="text" autocomplete="off" placeholder="英文:en 中文:zh"/-->
-											<select id="to" >
-											  <option name="to" value ="en">英文</option>
+											<select id="to" onchange="ChangeTip()" >
 											  <option name="to" value ="zh">中文</option>
+											  <option name="to" value ="en">英文</option>
 											</select>
 											<!--form action="" method="get"> 
 												<input name="to" id="to" type="radio" value="en" style="width: auto"/>英文 
@@ -829,6 +1043,13 @@
 								
                               <script type="text/javascript">
 							  
+								function ChangeTip() {
+									switch(document.getElementById('to').value) {
+										case 'en': document.getElementById('titleTip').innerHTML = '翻译 → Translate'; break;
+										case 'zh': document.getElementById('titleTip').innerHTML = 'Translate → 翻译'; break;
+									}
+								}
+								
 								function Init() {
 									document.getElementById("keyword").value = '';
 									document.getElementById('result').innerHTML = '';
@@ -940,7 +1161,7 @@
                         </div>
                     </article>	
 
-						
+					
                     <aside class="wrap-side-operation">
                         <div class="mod-side-operation">
 
