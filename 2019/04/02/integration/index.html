@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://study34668.github.io">
-  <title>Archives | Hexo</title>
+  <title>积分 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://study34668.github.io/archives/index.html">
+  <meta name="description" content="二重积分 三重积分">
+<meta name="keywords" content="math">
+<meta property="og:type" content="article">
+<meta property="og:title" content="积分">
+<meta property="og:url" content="https://study34668.github.io/2019/04/02/integration/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="二重积分 三重积分">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-03T11:09:09.370Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="积分">
+<meta name="twitter:description" content="二重积分 三重积分">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -136,36 +141,77 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-integration" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      积分
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/02/integration/" class="archive-article-date">
+
+        
+        <a href="/2019/04/02/integration/" class="archive-article-date">
   	<time datetime="2019-04-02T11:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/02/integration/">积分</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<ul>
+<li><strong>二重积分</strong></li>
+<li><strong>三重积分</strong></li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<h2 id="二重积分"><a href="#二重积分" class="headerlink" title="二重积分"></a>二重积分</h2><ul>
+<li><strong>理解</strong></li>
+</ul>
+<blockquote>
+<p><strong>二重积分其实就是把体积积出来，类比于积分是一条一条线积成一个面，二重积分就是先把一个元固定，积出一个一个面，再通过这些面的函数把立体积出来</strong></p>
+</blockquote>
+<ul>
+<li><strong>计算</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>计算二重积分一定要画图，画完图之后，通过图得出x，y对应的积分范围，最后依次对x，y积分得出结果，如果图是分段的那么把一个一个区块的结果相加即可</strong></li>
+<li><strong>如果积分函数中有关于x，y的一次函数的几次方，那么这时候直接积分会很难算，所以可以通过坐标旋转将一次函数变换成u，v，这时候积分函数就变成了u的几次方和v的几次方，就好积了</strong></li>
+<li><strong>还可以用坐标对称的方法将两个区域合成，如果被积函数中有$sin^2x+cos^2y$这种相加得定值的函数或者对称后可以想消得 0 的函数，这种方法会极大的化简积分</strong></li>
+<li><strong>如果被积区域是圆或者被积函数有$x^2+y^2$这种，可以考虑化成极坐标，这时平方相加都会变成$\rho$，积分就会变简单</strong><ul>
+<li>$\iint_Df(x,y)dxdy=\iint_Df(\rho,\theta)\rho d\rho d\theta​$</li>
+</ul>
+</li>
+<li><strong>二重积分和积分一样是一个定值，有时可以设成A来解方程</strong></li>
+<li><strong>二重积分同样有各种中值定理，遇见$lim_{t\to 0^+}\frac{1}{t^a}\cdots$这种题以及一些证明题时很好用</strong></li>
+<li><strong>当二重积分被积函数是1时，结果在数值上等于区域面积，$\frac{1}{S}\iint_Df(x,y)d\sigma$为$f(x,y)$在D上的平均值</strong></li>
+</ul>
+</blockquote>
+<h2 id="三重积分的计算"><a href="#三重积分的计算" class="headerlink" title="三重积分的计算"></a>三重积分的计算</h2><ul>
+<li><strong>第一种方法是截面法，先二后一法，因为很少用到，需要情况很特殊，就不说了</strong></li>
+<li><strong>大多数情况：也是要画图，看看立体投影在各个坐标面上的图形哪个简单；一般都是xoy平面最简单，此时就可以先确定z的范围后写成$\int_0^adz$然后再积x和y；如果z很复杂，那么这时候可以使用穿针法，先确定面，之后再积z；总之，就是把复杂的那个放到右面，先积出来，可以简化计算量</strong></li>
+<li><strong>同二重积分，大部分题目用极坐标都能大大减少计算量</strong></li>
+<li><p><strong>球面坐标变换（通常用于球面和圆锥面）</strong></p>
+<ul>
+<li><strong>在球面坐标系$Or\theta\varphi$中，方程$r=r_0$表示一个球面S，方程$\theta=\theta_0$表示一个通过z轴且垂直于$xOy$平面的半平面P，方程$\varphi=\varphi_0$表示一个以z轴为对称轴的上半圆锥面C</strong></li>
+<li>$\iiint_\Omega f(x,y,z)dxdydz= \iiint_{\Omega^{‘}}f(rsin\varphi cos\theta,rsin\varphi sin\theta,rcos\varphi)r^2sin\varphi drd\theta d\varphi$</li>
+</ul>
+</li>
+<li><p><strong>当三重积分被积函数是1时，结果在数值上等于区域体积，$\frac{1}{V}\iiint_\Omega f(x,y,z)dV$为$f(x,y,z)$在$\Omega$上的平均值</strong></p>
+</li>
+</ul>
+<h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -177,187 +223,55 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/27/curve/" class="archive-article-date">
-  	<time datetime="2019-03-27T11:36:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/27/curve/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">曲面</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/27/curve/">曲面</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">math</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/18/linear-algebra-note/" class="archive-article-date">
-  	<time datetime="2019-03-18T11:19:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/18/linear-algebra-note/">线性代数笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">线代</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/17/variables-function/" class="archive-article-date">
-  	<time datetime="2019-03-17T11:53:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/17/variables-function/">多元函数</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">math</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/16/Test/" class="archive-article-date">
-  	<time datetime="2019-03-16T03:48:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/16/Test/">Test</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/16/hello-world/" class="archive-article-date">
-  	<time datetime="2019-03-16T03:10:54.955Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/16/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -380,8 +294,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

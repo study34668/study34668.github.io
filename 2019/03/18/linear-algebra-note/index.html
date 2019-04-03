@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://study34668.github.io">
   <title>线性代数笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了   行列式  定义  性质  行列式展开    矩阵 矩阵乘法 矩阵转置 矩阵运算与行列式 初等矩阵 可逆矩阵 分块矩阵">
+  <meta name="description" content="行列式  定义  性质  行列式展开    矩阵 矩阵乘法 矩阵转置 矩阵运算与行列式 初等矩阵 可逆矩阵 分块矩阵 矩阵的秩与相抵">
 <meta name="keywords" content="线代">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性代数笔记">
 <meta property="og:url" content="https://study34668.github.io/2019/03/18/linear-algebra-note/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了   行列式  定义  性质  行列式展开    矩阵 矩阵乘法 矩阵转置 矩阵运算与行列式 初等矩阵 可逆矩阵 分块矩阵">
+<meta property="og:description" content="行列式  定义  性质  行列式展开    矩阵 矩阵乘法 矩阵转置 矩阵运算与行列式 初等矩阵 可逆矩阵 分块矩阵 矩阵的秩与相抵">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-01T09:27:11.470Z">
+<meta property="og:updated_time" content="2019-04-03T11:54:12.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数笔记">
-<meta name="twitter:description" content="注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了   行列式  定义  性质  行列式展开    矩阵 矩阵乘法 矩阵转置 矩阵运算与行列式 初等矩阵 可逆矩阵 分块矩阵">
+<meta name="twitter:description" content="行列式  定义  性质  行列式展开    矩阵 矩阵乘法 矩阵转置 矩阵运算与行列式 初等矩阵 可逆矩阵 分块矩阵 矩阵的秩与相抵">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -161,8 +161,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>注：把线代的各种定理和等价式总结了一下，就不用每次去翻书了</strong></p>
-<blockquote>
+        <blockquote>
 <ul>
 <li><p><strong>行列式</strong></p>
 <ul>
@@ -181,6 +180,7 @@
 <li><strong>初等矩阵</strong></li>
 <li><strong>可逆矩阵</strong></li>
 <li><strong>分块矩阵</strong></li>
+<li><strong>矩阵的秩与相抵</strong></li>
 </ul>
 </li>
 </ul>
@@ -278,6 +278,44 @@
 </li>
 <li><p><strong>小4元矩阵求逆小技巧很实用：主换位此变号，之后再乘或除以一个数即可得到逆矩阵</strong></p>
 </li>
+</ul>
+<h3 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h3><ul>
+<li><strong>在A矩阵中选k行l列交叉位置元素按原来位置组成的k×l矩阵称为A的一个k×l子矩阵；当k=l时，这个k×k子矩阵的行列式称为A的一个k阶子式</strong></li>
+<li><strong>A的非零子式的最高阶数称为A的秩，记作$r(A)$，零矩阵的秩为0</strong></li>
+<li><strong>A的秩为r，当且仅当A至少存在一个r阶子式非零，且所有r+1阶子式都等于零</strong></li>
+<li><p><strong>秩的一些性质</strong></p>
+<ul>
+<li>$0\leq r(A_{m\times n})\leq min \lbrace{ m,n \rbrace}$</li>
+<li>$r(A^T)=r(A)$</li>
+<li>$r(kA)=r(A),k\neq 0$</li>
+<li>A的子矩阵的秩不会超过A的秩</li>
+</ul>
+</li>
+<li><p><strong>矩阵初等变换不改变矩阵的秩</strong></p>
+</li>
+<li><p><strong>设A是$m\times n$矩阵，则对任意m阶可逆矩阵P，n阶可逆矩阵Q，有$r(PAQ)=r(PA)=r(AQ)=r(A)$</strong></p>
+</li>
+<li><strong>矩阵秩的大小关系性质</strong><ul>
+<li>$r\left[ \begin{matrix} A&amp;O \\ O&amp;B \end{matrix}\right]=r(A)+r(B)$</li>
+<li>$r(A+B)\leq r(A)+r(B)$</li>
+<li>$r(AB)\leq min\lbrace r(A),r(B) \rbrace$</li>
+<li>$r(AB)\geq r(A)+r(B)-n$</li>
+</ul>
+</li>
+</ul>
+<h3 id="矩阵的相抵"><a href="#矩阵的相抵" class="headerlink" title="矩阵的相抵"></a>矩阵的相抵</h3><ul>
+<li><strong>若A能通过有限次初等变换变成B，则称A与B相抵，记作$A\cong B​$，矩阵的相抵关系是一个等价关系</strong></li>
+<li><strong>设A是$m\times n​$非零矩阵，$r(A)=r​$，则$A\cong \left[ \begin{matrix} E_r&amp;O \\ O&amp;O \end{matrix}\right]_{m\times n}​$，称$\left[ \begin{matrix} E_r&amp;O \\ O&amp;O \end{matrix}\right]​$为矩阵A的相抵标准型</strong></li>
+<li><p><strong>设A，B都是$m\times n$矩阵，则下列条件等价</strong></p>
+<ul>
+<li>$A\cong B$</li>
+<li><strong>存在m阶可逆P，n阶可逆Q，使PAQ=B</strong></li>
+<li>$r(A)=r(B)$</li>
+</ul>
+</li>
+<li><p><strong>设$m\times n$矩阵A的秩为r，则存在m阶可逆P，n阶可逆Q使$PAQ=\left[ \begin{matrix} E_r&amp;O \\ O&amp;O \end{matrix}\right]$（或$A=P\left[ \begin{matrix} E_r&amp;O \\ O&amp;O \end{matrix}\right]Q$）</strong></p>
+</li>
+<li><strong>列满秩矩阵（r=n）通过行变换可变成相抵标准型；行满秩矩阵（r=m）通过列变换可变成相抵标准型</strong></li>
 </ul>
 <h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
       
@@ -465,11 +503,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线代</a>
+                <a href="javascript:void(0)" class="js-tag color5">math</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">math</a>
+                <a href="javascript:void(0)" class="js-tag color3">线代</a>
               </li>
             
             <div class="clearfix"></div>
