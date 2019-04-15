@@ -22,6 +22,7 @@
     <script src="../jQuery-min.js"></script>
     <script src="../md5.js"></script>
     <script src="http://localhost:81/MyGitHubBlog/hexo/config.js"></script>
+    <script src="./idioms.js"></script>
 
     <title>XCX | Hexo</title>
 
@@ -308,18 +309,6 @@
 
                                 <script type="text/javascript">
 
-                                    loadIdioms = function() {
-                                        var idioms = [];
-
-                                        var idiom = [];
-                                        idiom[0] = Array('邯','郸','学','步');
-                                        idiom[1] = Array('生搬','硬套','机械','一味','模仿','学不到','原来的');
-                                        idiom[2] = '邯郸学步:形容生搬硬套,一味模仿,学不到新的,还忘了原来的';
-                                        idioms.push(idiom);
-
-                                        return idioms;
-                                    }
-
                                     getNext = function(str) {
                                         var next = [];
                                         next[0] = -1;
@@ -377,7 +366,11 @@
 
                                     getIdioms = function() {
                                         var idioms = loadIdioms();
-                                        var ids = Array(0,0,0,0,0,0,0,0,0,0);
+                                        var ids = [];
+                                        for(var i=0; i<=9; i++) {
+                                            ids[i] = Math.floor( Math.random() * 9 + 1 );
+                                            if( ids[i] == 10 ) ids[i] = 9;
+                                        }
                                         c = [];
                                         var i;
                                         for( i in ids ) {
