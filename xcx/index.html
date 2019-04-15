@@ -191,7 +191,7 @@
                                         </td>
                                         <td><input id="answer10" type="text"/></td>
                                         <td id="right10"></td>
-                                        <td id="pending10" class="threePendings">√      √     50%</td>
+                                        <td id="pending10" class="threePendings"></td>
                                     </tr>
                                     <tr>
                                         <td id="problem11">
@@ -368,8 +368,8 @@
                                         var idioms = loadIdioms();
                                         var ids = [];
                                         for(var i=0; i<=9; i++) {
-                                            ids[i] = Math.floor( Math.random() * 9 + 1 );
-                                            if( ids[i] == 10 ) ids[i] = 9;
+                                            ids[i] = Math.floor( Math.random() * 9 );
+                                            if( ids[i] == 9 ) ids[i] = 8;
                                         }
                                         c = [];
                                         var i;
@@ -397,10 +397,10 @@
                                                 cc[0] = idiom[0][0];
                                                 cc[1] = idiom[0][3];
                                             }else if( r == 4 ) {
-                                                document.getElementById('idiomSpan'+i+'0').innerHTML = idiom[0][0];
-                                                document.getElementById('idiomSpan'+i+'1').innerHTML = idiom[0][2];
-                                                cc[0] = idiom[0][1];
-                                                cc[1] = idiom[0][3];
+                                                document.getElementById('idiomSpan'+i+'1').innerHTML = idiom[0][1];
+                                                document.getElementById('idiomSpan'+i+'2').innerHTML = idiom[0][3];
+                                                cc[0] = idiom[0][0];
+                                                cc[1] = idiom[0][2];
                                             }else if( r == 5 ) {
                                                 document.getElementById('idiomSpan'+i+'2').innerHTML = idiom[0][2] + idiom[0][3];
                                                 cc[0] = idiom[0][0];
