@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://study34668.github.io">
   <title>积分 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="二重积分 三重积分">
+  <meta name="description" content="二重积分 三重积分 第一类曲线积分 第二类曲线积分 微分方程">
 <meta name="keywords" content="math">
 <meta property="og:type" content="article">
 <meta property="og:title" content="积分">
 <meta property="og:url" content="https://study34668.github.io/2019/04/02/integration/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="二重积分 三重积分">
+<meta property="og:description" content="二重积分 三重积分 第一类曲线积分 第二类曲线积分 微分方程">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-03T11:09:09.370Z">
+<meta property="og:updated_time" content="2019-04-15T08:18:44.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="积分">
-<meta name="twitter:description" content="二重积分 三重积分">
+<meta name="twitter:description" content="二重积分 三重积分 第一类曲线积分 第二类曲线积分 微分方程">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -165,6 +165,9 @@
 <ul>
 <li><strong>二重积分</strong></li>
 <li><strong>三重积分</strong></li>
+<li><strong>第一类曲线积分</strong></li>
+<li><strong>第二类曲线积分</strong></li>
+<li><strong>微分方程</strong></li>
 </ul>
 </blockquote>
 <a id="more"></a>
@@ -203,6 +206,60 @@
 </li>
 <li><p><strong>当三重积分被积函数是1时，结果在数值上等于区域体积，$\frac{1}{V}\iiint_\Omega f(x,y,z)dV$为$f(x,y,z)$在$\Omega$上的平均值</strong></p>
 </li>
+</ul>
+<h2 id="第一类曲线积分"><a href="#第一类曲线积分" class="headerlink" title="第一类曲线积分"></a>第一类曲线积分</h2><ul>
+<li><p><strong>求法：第一类曲线积分的求法是求出曲线的参数方程，则</strong></p>
+<blockquote>
+<p><strong>$\int_Lf(x,y,z)ds=\int_\alpha^\beta f(x(t),y(t),z(t))\sqrt{|x’(t)|^2+|y’(t)|^2+|z’(t)|^2}dt​$</strong></p>
+</blockquote>
+</li>
+<li><p><strong>第一类曲线积分也有对称的性质，原来的值等于对称的一边的两倍</strong></p>
+</li>
+<li><strong>对于相交式曲线，尽量将两个变量变成圆的形式，之后就可以用极坐标表示了，再用这两个变量表示第三个</strong></li>
+</ul>
+<h2 id="第二类曲线积分"><a href="#第二类曲线积分" class="headerlink" title="第二类曲线积分"></a>第二类曲线积分</h2><ul>
+<li><p><strong>求法：仍是求出曲线的参数方程（但要注意顺着曲线方向），则</strong></p>
+<blockquote>
+<ul>
+<li><strong>$\int_LP(x,y,z)dx=\int_\alpha^\beta P(x(t),y(t),z(t))x’(t)dt​$</strong></li>
+<li><strong>$\int_LQ(x,y,z)dy=\int_\alpha^\beta Q(x(t),y(t),z(t))y’(t)dt$</strong></li>
+<li><strong>$\int_LR(x,y,z)dz=\int_\alpha^\beta R(x(t),y(t),z(t))z’(t)dt​$</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>由上三式与第一类曲线积分的式子，可得ds, dx, dy, dz, dt与方向余弦的关系</strong></p>
+<blockquote>
+<ul>
+<li><strong>$ds=\sqrt{|x’(t)|^2+|y’(t)|^2+|z’(t)|^2}dt​$</strong></li>
+<li><strong>$dx=x’(t)dt=cos\alpha ds​$</strong></li>
+<li><strong>$dy=y’(t)dt=cos\beta ds$</strong></li>
+<li><strong>$dz=z’(t)dt=cos\gamma ds​$</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>第二类曲线积分没有积分中值定理</strong></p>
+</li>
+<li><p><strong>Green公式（通过Green公式可以把闭曲线的积分转化为二重积分）</strong></p>
+<blockquote>
+<ul>
+<li><strong>$\iint_D\frac{\varphi P}{\varphi y}d\sigma=-\oint_LPdx$</strong></li>
+<li><strong>$\iint_D\frac{\varphi Q}{\varphi x}d\sigma=\oint Qdy$</strong></li>
+<li><strong>$\oint _LPdx+Qdy=\iint_D\frac{\varphi Q}{\varphi x}-\frac{\varphi P}{\varphi y}d\sigma$</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>若积分$\int_LPdx+Qdy$满足以下条件之一，则该积分与路径无关，可以将路径变为直线，简化计算</strong></p>
+<blockquote>
+<ul>
+<li><strong>$du=Pdx+Qdy$</strong></li>
+<li><strong>$\frac{\varphi Q}{\varphi x}=\frac{\varphi P}{\varphi y}​$</strong></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h2><ul>
+<li><strong>如果微分方程$P(x,y)dx+Q(x,y)dy=0$的左端是某函数$u(x,y)$的全微分，则称该方程为全微分方程，其充要条件是$\frac{\varphi Q}{\varphi x}=\frac{\varphi P}{\varphi y}$，其通解为$u(x,y)=C$</strong></li>
+<li><strong>如果微分方程不是全微分方程，但是可以通过两边同时乘$u(x)$或$u(y)$而得到全微分方程的话，则可以将u代入全微分方程的充要条件，这时候通常会得到一个之前学过的另一类的微分方程，通过这个方程解出u，之后再代入解全微分方程就可以了</strong></li>
 </ul>
 <h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
       
@@ -381,11 +438,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">math</a>
+                <a href="javascript:void(0)" class="js-tag color3">线代</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线代</a>
+                <a href="javascript:void(0)" class="js-tag color5">math</a>
               </li>
             
             <div class="clearfix"></div>
