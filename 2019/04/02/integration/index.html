@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="二重积分 三重积分 第一类曲线积分 第二类曲线积分 微分方程">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-15T08:18:44.626Z">
+<meta property="og:updated_time" content="2019-04-27T09:31:34.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="积分">
 <meta name="twitter:description" content="二重积分 三重积分 第一类曲线积分 第二类曲线积分 微分方程">
@@ -261,6 +261,41 @@
 <li><strong>如果微分方程$P(x,y)dx+Q(x,y)dy=0$的左端是某函数$u(x,y)$的全微分，则称该方程为全微分方程，其充要条件是$\frac{\varphi Q}{\varphi x}=\frac{\varphi P}{\varphi y}$，其通解为$u(x,y)=C$</strong></li>
 <li><strong>如果微分方程不是全微分方程，但是可以通过两边同时乘$u(x)$或$u(y)$而得到全微分方程的话，则可以将u代入全微分方程的充要条件，这时候通常会得到一个之前学过的另一类的微分方程，通过这个方程解出u，之后再代入解全微分方程就可以了</strong></li>
 </ul>
+<h2 id="第一类曲面积分"><a href="#第一类曲面积分" class="headerlink" title="第一类曲面积分"></a>第一类曲面积分</h2><ul>
+<li><p><strong>求法：通常是把曲面看作 x 型、y 型或者 z 型的函数，比如对于曲面$z=z(x,y)$，有</strong></p>
+<blockquote>
+<p>$\iint_\Sigma f(x,y,z)dS=\iint_Df(x,y,z(x,y))\sqrt{1+(z’_x)^2+(z’_y)^2}d\sigma$，其中D为曲面在 xOy 的投影</p>
+</blockquote>
+</li>
+<li><p><strong>第一类曲面积分也满足各种对称性：奇 0 偶乘 2，所以可以用对称性简化计算</strong></p>
+</li>
+<li><strong>占据光滑有界曲面 $\Sigma$ 且密度函数为 $\mu(x,y)$ 的曲面薄板质量为 $m=\iint_\Sigma\mu(x,y)dS$</strong></li>
+<li><strong>空间中一片光滑有界曲面 $\Sigma$ 的面积为 $S=\iint_\Sigma dS$</strong></li>
+</ul>
+<h2 id="第二类曲面积分"><a href="#第二类曲面积分" class="headerlink" title="第二类曲面积分"></a>第二类曲面积分</h2><ul>
+<li><p><strong>求法：第二类曲面积分可以转化为二重积分，只需把曲面看成函数，但要注意方向；用 z 来举例，若曲面为 z = z(x,y)，D 为曲面在 xOy 的投影</strong></p>
+<blockquote>
+<p>$\iint_\Sigma R(x,y,z)dxdy=\iint_{Dxy}R(x,y,z(x,y))d\sigma$，若曲面取上侧</p>
+<ul>
+<li>若在 xOy 投影，上侧取正，下侧取负</li>
+<li>若在 yOz 投影，前侧取正，后侧取负</li>
+<li>若在 xOz 投影，右侧取正，左侧取负</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>依然满足对称性，但一定要注意曲面的方向，如果对称后曲面的方向也变了，那么因为取符号的变化，会出现偶 0 奇 2 的情况</strong></p>
+</li>
+<li><p><strong>Gauss公式：设 $\Omega$ 由 $\Sigma$ 围成，取曲面外侧，$n=(cos\alpha,cos\beta,cos\gamma)$ 为曲面单位外法向量</strong></p>
+<blockquote>
+<ul>
+<li>$\iiint_\Omega\frac{\varphi P}{\varphi x}dV=\oiint_\Sigma Pdydz=\oiint_\Sigma Pcos\alpha dS=\oiint_\Sigma Pn_x dS​$</li>
+<li>其它同理，从而有</li>
+<li>$\iiint_\Omega \frac{\varphi P}{\varphi x}+\frac{\varphi Q}{\varphi y}+\frac{\varphi R}{\varphi z} dV=\oiint_\Sigma Pdydz+Qdzdx+Rdxdy=\oiint_\Sigma Pcos\alpha+Qcos\beta+Rcos\gamma dS=\oiint_\Sigma A\cdot ndS​$</li>
+<li>其中$A(x,y,z)=(P(x,y,z), Q(x,y,z), R(x,y,z))​$</li>
+</ul>
+</blockquote>
+</li>
+</ul>
 <h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
       
 
@@ -438,11 +473,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线代</a>
+                <a href="javascript:void(0)" class="js-tag color5">math</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">math</a>
+                <a href="javascript:void(0)" class="js-tag color3">线代</a>
               </li>
             
             <div class="clearfix"></div>
