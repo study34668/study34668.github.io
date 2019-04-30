@@ -144,359 +144,231 @@
                     </style>
 
 
-                    <!--<article id="post-Test2" class="article article-type-post " itemscope itemprop="blogPost">-->
-                        <!--<div class="article-inner">-->
+                    <article id="post-Test3" class="article article-type-post " itemscope itemprop="blogPost">
+                        <div class="article-inner">
 
-                            <!--<header class="article-header">-->
+                            <header class="article-header">
 
-                                <!--<h1 class="article-title" itemprop="name">-->
-                                    <!--小学语文基础题生成器-->
-                                <!--</h1>-->
+                                <h1 class="article-title" itemprop="name">
+                                    小学数学应用题生成器
+                                </h1>
 
-                                <!--<select id="tag1" >-->
-                                    <!--<option name="tag1" value="idiom">老四字成语</option>-->
-                                <!--</select>-->
+                                <select id="tag2" >
+                                    <option name="tag2" value="shape">图形面积相关</option>
+                                </select>
 
-                            <!--</header>-->
+                            </header>
 
-                            <!--<div class="article-entry" itemprop="articleBody">-->
+                            <div class="article-entry" itemprop="articleBody">
 
-                                <!--<table style="table-layout: fixed">-->
-                                    <!--<style>-->
-                                        <!--input.small {-->
-                                            <!--width: 20%;-->
-                                        <!--}-->
-                                        <!--td.threePendings {-->
-                                            <!--text-align: center;-->
-                                            <!--white-space: pre-wrap;-->
-                                        <!--}-->
-                                    <!--</style>-->
+                                <table style="table-layout: fixed">
+                                    <thead>
+                                    <tr>
+                                        <th>题目</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td id="problem"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <table style="table-layout: fixed">
+                                    <thead>
+                                    <tr>
+                                        <th>你的答案</th>
+                                        <th>正确答案</th>
+                                        <th>对错</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input id="answer" type="text"/></td>
+                                        <td id="right"></td>
+                                        <td id="pending"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
 
-                                    <!--<thead>-->
-                                    <!--<tr>-->
-                                        <!--<th>补全四字成语</th>-->
-                                        <!--<th>成语意义</th>-->
-                                        <!--<th>参考答案</th>-->
-                                        <!--<th>填空 意义 准确度</th>-->
-                                    <!--</tr>-->
-                                    <!--</thead>-->
+                                <button onclick="getP()">出题</button>
+                                <button onclick="checkP()">检查</button>
 
-                                    <!--<tbody>-->
-                                    <!--<tr>-->
-                                        <!--<td id="problem10">-->
-                                            <!--<span id="idiomSpan00"></span>-->
-                                            <!--<input id="idiom00" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan01"></span>-->
-                                            <!--<input id="idiom01" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan02"></span>-->
-                                        <!--</td>-->
-                                        <!--<td><input id="answer10" type="text"/></td>-->
-                                        <!--<td id="right10"></td>-->
-                                        <!--<td id="pending10" class="threePendings"></td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td id="problem11">-->
-                                            <!--<span id="idiomSpan10"></span>-->
-                                            <!--<input id="idiom10" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan11"></span>-->
-                                            <!--<input id="idiom11" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan12"></span>-->
-                                        <!--</td>-->
-                                        <!--<td><input id="answer11" type="text"/></td>-->
-                                        <!--<td id="right11"></td>-->
-                                        <!--<td id="pending11" class="threePendings"></td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td id="problem12">-->
-                                            <!--<span id="idiomSpan20"></span>-->
-                                            <!--<input id="idiom20" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan21"></span>-->
-                                            <!--<input id="idiom21" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan22"></span>-->
-                                        <!--</td>-->
-                                        <!--<td><input id="answer12" type="text"/></td>-->
-                                        <!--<td id="right12"></td>-->
-                                        <!--<td id="pending12" class="threePendings"></td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td id="problem32">-->
-                                            <!--<span id="idiomSpan30"></span>-->
-                                            <!--<input id="idiom30" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan31"></span>-->
-                                            <!--<input id="idiom31" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan32"></span>-->
-                                        <!--</td>-->
-                                        <!--<td><input id="answer13" type="text"/></td>-->
-                                        <!--<td id="right13"></td>-->
-                                        <!--<td id="pending13" class="threePendings"></td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td id="problem14">-->
-                                            <!--<span id="idiomSpan40"></span>-->
-                                            <!--<input id="idiom40" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan41"></span>-->
-                                            <!--<input id="idiom41" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan42"></span>-->
-                                        <!--</td>-->
-                                        <!--<td><input id="answer14" type="text"/></td>-->
-                                        <!--<td id="right14"></td>-->
-                                        <!--<td id="pending14" class="threePendings"></td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td id="problem15">-->
-                                            <!--<span id="idiomSpan50"></span>-->
-                                            <!--<input id="idiom50" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan51"></span>-->
-                                            <!--<input id="idiom51" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan52"></span>-->
-                                        <!--</td>-->
-                                        <!--<td><input id="answer15" type="text"/></td>-->
-                                        <!--<td id="right15"></td>-->
-                                        <!--<td id="pending15" class="threePendings"></td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td id="problem16">-->
-                                            <!--<span id="idiomSpan60"></span>-->
-                                            <!--<input id="idiom60" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan61"></span>-->
-                                            <!--<input id="idiom61" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan62"></span>-->
-                                        <!--</td>-->
-                                        <!--<td><input id="answer16" type="text"/></td>-->
-                                        <!--<td id="right16"></td>-->
-                                        <!--<td id="pending16" class="threePendings"></td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td id="problem17">-->
-                                            <!--<span id="idiomSpan70"></span>-->
-                                            <!--<input id="idiom70" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan71"></span>-->
-                                            <!--<input id="idiom71" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan72"></span>-->
-                                        <!--</td>-->
-                                        <!--<td><input id="answer17" type="text"/></td>-->
-                                        <!--<td id="right17"></td>-->
-                                        <!--<td id="pending17" class="threePendings"></td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td id="problem18">-->
-                                            <!--<span id="idiomSpan80"></span>-->
-                                            <!--<input id="idiom80" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan81"></span>-->
-                                            <!--<input id="idiom81" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan82"></span>-->
-                                        <!--</td>-->
-                                        <!--<td><input id="answer18" type="text"/></td>-->
-                                        <!--<td id="right18"></td>-->
-                                        <!--<td id="pending18" class="threePendings"></td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td id="problem19">-->
-                                            <!--<span id="idiomSpan90"></span>-->
-                                            <!--<input id="idiom90" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan91"></span>-->
-                                            <!--<input id="idiom91" class="small" type="text" />-->
-                                            <!--<span id="idiomSpan92"></span>-->
-                                        <!--</td>-->
-                                        <!--<td><input id="answer19" type="text"/></td>-->
-                                        <!--<td id="right19"></td>-->
-                                        <!--<td id="pending19" class="threePendings"></td>-->
-                                    <!--</tr>-->
-                                    <!--</tbody>-->
-                                <!--</table>-->
+                                <script type="text/javascript">
 
-                                <!--<button onclick="getProblemC()">出题</button>-->
-                                <!--<button onclick="checkC()">检查</button>-->
+                                    Rec = function(a, b) {
+                                        if( a <= 0 || b <= 0 ) {
+                                            this.l = 1;
+                                            this.s = 1;
+                                        }else if( a > b ) {
+                                            this.l = a;
+                                            this.s = b;
+                                        }else{
+                                            this.l = b;
+                                            this.s = a;
+                                        }
+                                        this.setl = function(a) {
+                                            if( a <= 0 ) return;
+                                            if( a >= this.s ) this.l = a;
+                                            else {
+                                                this.l = this.s;
+                                                this.s = a;
+                                            }
+                                        }
+                                        this.sets = function(a) {
+                                            if( a <= 0 ) return;
+                                            if( a <= this.l ) this.s = a;
+                                            else {
+                                                this.s = this.l;
+                                                this.l = a;
+                                            }
+                                        }
+                                        this.getS = function() {
+                                            return this.l * this.s;
+                                        }
+                                        this.getC = function() {
+                                            return 2 * (this.l + this.s);
+                                        }
+                                    }
 
-                                <!--<script type="text/javascript">-->
+                                    //默认分米	0:长度	1:面积
+                                    function changeUnit(a, type = 0) {
+                                        if( type == 0 ) {
+                                            if( a % 10 == 0 ) return String(a/10) + "米";
+                                            if( Math.floor(Math.random()*2) == 0 ) return String(a*10) + "厘米";
+                                            else return String(a) + "分米";
+                                        }else{
+                                            if( a % 100 == 0 ) return String(a/100) + "平方米";
+                                            if( a <= 100 ) return String(a*100) + "平方厘米";
+                                            else return String(a) + "平方分米";
+                                        }
+                                    }
 
-                                    <!--getNext = function(str) {-->
-                                        <!--var next = [];-->
-                                        <!--next[0] = -1;-->
-                                        <!--var k = -1;-->
-                                        <!--var j = 0;-->
+                                    function getChange(dif, type = 0) {
+                                        var change = "";
+                                        if( dif > 0 ) {
+                                            change = "增加" + changeUnit(dif, type);
+                                        }else if( dif < 0 ) {
+                                            change = "减少" + changeUnit(-dif, type);
+                                        }else{
+                                            change = "不变";
+                                        }
 
-                                        <!--while( j < str.length - 1 ) {-->
-                                            <!--if( str[j] == str[k] || k == -1 ) {-->
-                                                <!--next[++j] = ++k;-->
-                                            <!--}else{-->
-                                                <!--k = next[k];-->
-                                            <!--}-->
-                                        <!--}-->
+                                        return change;
+                                    }
 
-                                        <!--return next;-->
-                                    <!--}-->
+                                    function getP() {
+                                        var rec1 = new Rec(Math.floor(Math.random()*99 + 1), Math.floor(Math.random()*99 + 1));
+                                        var rec2 = new Rec(Math.floor(Math.random()*99 + 1), Math.floor(Math.random()*99 + 1));
+                                        console.log(rec1.l, rec1.s, rec2.l, rec2.s);
+                                        var q = ["一个长为", "，宽为", "的长方形，如果长", "，宽", "，面积就"];
+                                        var range = Math.floor(Math.random()*4);
+                                        a = '';
+                                        switch(range) {
+                                            case 0 : {
+                                                a = String(rec1.l);
+                                                q[0] = q[0] + "多少分米";
+                                                q[1] = q[1] + changeUnit(rec1.s);
+                                                q[2] = q[2] + getChange(rec2.l - rec1.l);
+                                                q[3] = q[3] + getChange(rec2.s - rec1.s);
+                                                q[4] = q[4] + getChange(rec2.getS() - rec1.getS(), 1);
 
-                                    <!--index = function(str, s) {-->
-                                        <!--var next = getNext(s);-->
-                                        <!--var i = 0;-->
-                                        <!--var j = 0;-->
+                                                break;
+                                            }
+                                            case 1 : {
+                                                a = String(rec1.s);
+                                                q[0] = q[0] + changeUnit(rec1.l);
+                                                q[1] = q[1] + "多少分米";
+                                                q[2] = q[2] + getChange(rec2.l - rec1.l);
+                                                q[3] = q[3] + getChange(rec2.s - rec1.s);
+                                                q[4] = q[4] + getChange(rec2.getS() - rec1.getS(), 1);
 
-                                        <!--while( i < str.length && j < s.length ) {-->
-                                            <!--if( j == -1 || str[i] == s[j] ) {-->
-                                                <!--i++;-->
-                                                <!--j++;-->
-                                            <!--}else{-->
-                                                <!--j = next[j];-->
-                                            <!--}-->
-                                        <!--}-->
+                                                break;
+                                            }
+                                            case 2 : {
+                                                var difl = rec2.l - rec1.l;
+                                                if( difl > 0 ) {
+                                                    q[2] = q[2] + "增加多少分米";
+                                                    a = String(difl);
+                                                }else if( difl < 0 ) {
+                                                    q[2] = q[2] + "减少多少分米";
+                                                    a = String(-difl);
+                                                }else{
+                                                    q[2] = q[2] + "怎样变化";
+                                                    a = "不变";
+                                                }
 
-                                        <!--if( j == s.length ) return i - j;-->
-                                        <!--else return -1;-->
-                                    <!--}-->
+                                                q[0] = q[0] + changeUnit(rec1.l);
+                                                q[1] = q[1] + changeUnit(rec1.s);
+                                                q[3] = q[3] + getChange(rec2.s - rec1.s);
+                                                q[4] = q[4] + getChange(rec2.getS() - rec1.getS(), 1);
 
-                                    <!--check = function(mean, keywords) {-->
-                                        <!--const pass = 2;-->
+                                                break;
+                                            }
+                                            case 3 : {
+                                                var difs = rec2.s - rec1.s;
+                                                if( difs > 0 ) {
+                                                    q[3] = q[3] + "增加多少分米";
+                                                    a = String(difs);
+                                                }else if( difs < 0 ) {
+                                                    q[3] = q[3] + "减少多少分米";
+                                                    a = String(-difs);
+                                                }else{
+                                                    q[3] = q[3] + "怎样变化";
+                                                    a = "不变";
+                                                }
 
-                                        <!--var count = 0;-->
-                                        <!--var expect = mean.length / 4;-->
+                                                q[0] = q[0] + changeUnit(rec1.l);
+                                                q[1] = q[1] + changeUnit(rec1.s);
+                                                q[2] = q[2] + getChange(rec2.l - rec1.l);
+                                                q[4] = q[4] + getChange(rec2.getS() - rec1.getS(), 1);
 
-                                        <!--var i;-->
-                                        <!--for( i in keywords ) {-->
-                                            <!--if( index(mean, keywords[i]) != -1 ) count++;-->
-                                        <!--}-->
+                                                break;
+                                            }
+                                            case 4 : {
+                                                var difS = rec2.getS() - rec1.getS();
+                                                if( difS > 0 ) {
+                                                    q[4] = q[4] + "增加多少平方分米";
+                                                    a = String(difS);
+                                                }else if( difS < 0 ) {
+                                                    q[4] = q[4] + "减少多少平方分米";
+                                                    a = String(-difS);
+                                                }else{
+                                                    q[4] = q[4] + "怎样变化";
+                                                    a = "不变";
+                                                }
 
-                                        <!--var result = [];-->
-                                        <!--result[0] = ( count >= pass ) ? true : false;-->
-                                        <!--result[1] = Number( Math.floor( count / expect * 100 ) );-->
-                                        <!--if( isNaN( result[1] ) ) result[1] = 0;-->
-                                        <!--if( result[1] > 100 ) result[1] = 100;-->
+                                                q[0] = q[0] + changeUnit(rec1.l);
+                                                q[1] = q[1] + changeUnit(rec1.s);
+                                                q[2] = q[2] + getChange(rec2.l - rec1.l);
+                                                q[3] = q[3] + getChange(rec2.s - rec1.s);
 
-                                        <!--return result;-->
-                                    <!--}-->
+                                                break;
+                                            }
+                                        }
+                                        q = q[0] + q[1] + q[2] + q[3] + q[4];
+                                        document.getElementById('problem').innerHTML = q;
+                                        document.getElementById('answer').value = "";
+                                        document.getElementById('right').innerHTML = "";
+                                        document.getElementById('pending').innerHTML = "";
+                                    }
 
-                                    <!--getIdioms = function() {-->
-                                        <!--var idioms = loadIdioms();-->
-                                        <!--var ids = [];-->
-                                        <!--for(var i=0; i<=9; i++) {-->
-                                            <!--ids[i] = Math.floor( Math.random() * 9 );-->
-                                            <!--if( ids[i] == 9 ) ids[i] = 8;-->
-                                        <!--}-->
-                                        <!--c = [];-->
-                                        <!--var i;-->
-                                        <!--for( i in ids ) {-->
-                                            <!--var cc = [];-->
-                                            <!--var idiom = idioms[ids[i]];-->
-                                            <!--var r = Math.floor(Math.random() * 6);-->
-                                            <!--if( r == 6 ) r = 5;-->
-                                            <!--if( r == 0 ) {-->
-                                                <!--document.getElementById('idiomSpan'+i+'0').innerHTML = idiom[0][0] + idiom[0][1];-->
-                                                <!--cc[0] = idiom[0][2];-->
-                                                <!--cc[1] = idiom[0][3];-->
-                                            <!--}else if( r == 1 ) {-->
-                                                <!--document.getElementById('idiomSpan'+i+'0').innerHTML = idiom[0][0];-->
-                                                <!--document.getElementById('idiomSpan'+i+'1').innerHTML = idiom[0][2];-->
-                                                <!--cc[0] = idiom[0][1];-->
-                                                <!--cc[1] = idiom[0][3];-->
-                                            <!--}else if( r == 2 ) {-->
-                                                <!--document.getElementById('idiomSpan'+i+'0').innerHTML = idiom[0][0];-->
-                                                <!--document.getElementById('idiomSpan'+i+'2').innerHTML = idiom[0][3];-->
-                                                <!--cc[0] = idiom[0][1];-->
-                                                <!--cc[1] = idiom[0][2];-->
-                                            <!--}else if( r == 3 ) {-->
-                                                <!--document.getElementById('idiomSpan'+i+'1').innerHTML = idiom[0][1] + idiom[0][2];-->
-                                                <!--cc[0] = idiom[0][0];-->
-                                                <!--cc[1] = idiom[0][3];-->
-                                            <!--}else if( r == 4 ) {-->
-                                                <!--document.getElementById('idiomSpan'+i+'1').innerHTML = idiom[0][1];-->
-                                                <!--document.getElementById('idiomSpan'+i+'2').innerHTML = idiom[0][3];-->
-                                                <!--cc[0] = idiom[0][0];-->
-                                                <!--cc[1] = idiom[0][2];-->
-                                            <!--}else if( r == 5 ) {-->
-                                                <!--document.getElementById('idiomSpan'+i+'2').innerHTML = idiom[0][2] + idiom[0][3];-->
-                                                <!--cc[0] = idiom[0][0];-->
-                                                <!--cc[1] = idiom[0][1];-->
-                                            <!--}-->
-                                            <!--cc[2] = idiom[1];-->
-                                            <!--cc[3] = idiom[2];-->
-                                            <!--c.push(cc);-->
-                                        <!--}-->
-                                    <!--}-->
+                                    function checkP()
+                                    {
+                                        var answer;
+                                        answer = document.getElementById('answer').value;
+                                        document.getElementById('right').innerHTML = a;
+                                        document.getElementById('pending').innerHTML = answer == a ? "√" : "×";
+                                    }
 
-                                    <!--function getProblemC() {-->
-                                        <!--var tag = document.getElementById('tag1').value;-->
-                                        <!--switch(tag) {-->
-                                            <!--case 'idiom' : getIdioms(); break;-->
-                                            <!--default : getIdioms(); break;-->
-                                        <!--}-->
+                                </script>
 
-                                        <!--document.getElementById("answer10").value = '';-->
-                                        <!--document.getElementById("answer11").value = '';-->
-                                        <!--document.getElementById("answer12").value = '';-->
-                                        <!--document.getElementById("answer13").value = '';-->
-                                        <!--document.getElementById("answer14").value = '';-->
-                                        <!--document.getElementById("answer15").value = '';-->
-                                        <!--document.getElementById("answer16").value = '';-->
-                                        <!--document.getElementById("answer17").value = '';-->
-                                        <!--document.getElementById("answer18").value = '';-->
-                                        <!--document.getElementById("answer19").value = '';-->
-
-                                        <!--document.getElementById("right10").innerHTML = '';-->
-                                        <!--document.getElementById("right11").innerHTML = '';-->
-                                        <!--document.getElementById("right12").innerHTML = '';-->
-                                        <!--document.getElementById("right13").innerHTML = '';-->
-                                        <!--document.getElementById("right14").innerHTML = '';-->
-                                        <!--document.getElementById("right15").innerHTML = '';-->
-                                        <!--document.getElementById("right16").innerHTML = '';-->
-                                        <!--document.getElementById("right17").innerHTML = '';-->
-                                        <!--document.getElementById("right18").innerHTML = '';-->
-                                        <!--document.getElementById("right19").innerHTML = '';-->
-
-                                        <!--document.getElementById("pending10").innerHTML = '';-->
-                                        <!--document.getElementById("pending11").innerHTML = '';-->
-                                        <!--document.getElementById("pending12").innerHTML = '';-->
-                                        <!--document.getElementById("pending13").innerHTML = '';-->
-                                        <!--document.getElementById("pending14").innerHTML = '';-->
-                                        <!--document.getElementById("pending15").innerHTML = '';-->
-                                        <!--document.getElementById("pending16").innerHTML = '';-->
-                                        <!--document.getElementById("pending17").innerHTML = '';-->
-                                        <!--document.getElementById("pending18").innerHTML = '';-->
-                                        <!--document.getElementById("pending19").innerHTML = '';-->
-                                    <!--}-->
-
-                                    <!--function checkC() {-->
-                                        <!--var answer = [];-->
-                                        <!--for(var i=0; i<=9; i++) {-->
-                                            <!--var tmp = [];-->
-                                            <!--tmp[0] = document.getElementById("idiom"+i+"0").value;-->
-                                            <!--tmp[1] = document.getElementById("idiom"+i+"1").value;-->
-                                            <!--tmp[2] = document.getElementById("answer1"+i).value;-->
-                                            <!--answer[i] = tmp;-->
-                                        <!--}-->
-
-                                        <!--document.getElementById("right10").innerHTML = c[0][3];-->
-                                        <!--document.getElementById("right11").innerHTML = c[1][3];-->
-                                        <!--document.getElementById("right12").innerHTML = c[2][3];-->
-                                        <!--document.getElementById("right13").innerHTML = c[3][3];-->
-                                        <!--document.getElementById("right14").innerHTML = c[4][3];-->
-                                        <!--document.getElementById("right15").innerHTML = c[5][3];-->
-                                        <!--document.getElementById("right16").innerHTML = c[6][3];-->
-                                        <!--document.getElementById("right17").innerHTML = c[7][3];-->
-                                        <!--document.getElementById("right18").innerHTML = c[8][3];-->
-                                        <!--document.getElementById("right19").innerHTML = c[9][3];-->
-
-                                        <!--var i;-->
-                                        <!--for( i in answer ) {-->
-                                            <!--var pending = '';-->
-                                            <!--if( answer[i][0] == c[i][0] && answer[i][1] == c[i][1] ) pending += '√      ';-->
-                                            <!--else pending += '×      ';-->
-                                            <!--var result = check(answer[i][2], c[i][2]);-->
-                                            <!--if( result[0] ) pending += '√       ';-->
-                                            <!--else pending += '×      ';-->
-                                            <!--pending += result[1] + '%';-->
-                                            <!--document.getElementById("pending1"+i).innerHTML = pending;-->
-                                        <!--}-->
-                                    <!--}-->
-                                    <!---->
-                                <!--</script>-->
-
-                            <!--</div>-->
-                            <!--<div class="article-info article-info-index">-->
-                                <!--<div class="mask js-mask"></div>-->
-                                <!--<div class="clearfix"></div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</article>-->
+                            </div>
+                            <div class="article-info article-info-index">
+                                <div class="mask js-mask"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </article>
 
 
                     <article id="post-Test2" class="article article-type-post " itemscope itemprop="blogPost">
@@ -753,6 +625,7 @@
                             </div>
                         </div>
                     </article>
+
 
                     <article id="post-Test1" class="article article-type-post " itemscope itemprop="blogPost">
                         <div class="article-inner">
