@@ -1177,7 +1177,7 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td><input id="keyword" type="text" autocomplete="off"/></td>
+                                        <td><input id="keyword" type="text" autocomplete="off" onkeydown="checkEnter()"/></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -1196,10 +1196,16 @@
                                 </table>
 
                                 <span id="tip"></span>
-                                <button onclick="Translate()">翻译</button>
+                                <button id="TranslateButton" onclick="Translate()">翻译</button>
                                 <button onclick="Init()">清空</button>
 
                                 <script type="text/javascript">
+
+                                    function checkEnter() {
+                                        if( event.keyCode == 13 ) {
+                                            document.getElementById("TranslateButton").click();
+                                        }
+                                    }
 
                                     function ChangeTip() {
                                         switch (document.getElementById('to').value) {
